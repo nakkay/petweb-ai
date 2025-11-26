@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="わんダフル信州 - 長野県のペットと楽しむ観光情報メディア。愛犬・愛猫と一緒に訪れたいスポットやお出かけ情報を発信しています。">
+    <title>わんダフル信州 | ペットと楽しむ長野県観光</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2D7A4F;
+            --primary-dark: #1E5A3A;
+            --secondary: #7CB342;
+            --accent: #FFB74D;
+            --bg: #F8FAF9;
+            --card-bg: #FFFFFF;
+            --text: #1A1A1A;
+            --text-light: #666666;
+            --text-muted: #999999;
+            --border: #E8EDE9;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .en {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 10rem 1.5rem 4rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                        url('/images/hero-shinshu.jpg') center/cover no-repeat;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(232, 245, 233, 0.85) 0%, rgba(248, 250, 249, 0.9) 100%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-logo-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-logo-text {
+            text-align: left;
+        }
+
+        .hero-logo-en {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-logo-ja {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--text);
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-lead {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1.2rem 3.5rem 1.2rem 1.5rem;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            font-size: 1rem;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 4px 20px rgba(45, 122, 79, 0.1);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .search-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        /* Section */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-tag {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+        }
+
+        /* Featured Spots */
+        .featured-spots {
+            background: white;
+        }
+
+        .spots-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .spot-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spot-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .spot-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .spot-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .spot-card:hover .spot-image img {
+            transform: scale(1.08);
+        }
+
+        .spot-tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: white;
+            color: var(--primary);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .spot-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spot-location {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .spot-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .spot-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .spot-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .spot-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* Categories */
+        .categories {
+            background: var(--bg);
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding-bottom: 0.5rem;
+        }
+
+        .category-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-tab {
+            background: white;
+            border: 2px solid var(--border);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .category-tab:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .category-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* Articles */
+        .articles {
+            background: white;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .article-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .article-card:hover .article-image img {
+            transform: scale(1.05);
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .article-excerpt {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* More Button */
+        .more-btn-wrapper {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .more-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(45, 122, 79, 0.2);
+        }
+
+        .more-btn svg {
+            transition: transform 0.3s;
+        }
+
+        .more-btn:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            margin: 2rem 1.5rem;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 3rem 1.5rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .spots-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                padding: 8rem 1.5rem 3rem;
+            }
+
+            .hero-logo-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2.2rem;
+            }
+
+            .hero-logo-en {
+                font-size: 1.5rem;
+            }
+
+            .hero-logo-ja {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .spots-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="en">WanDerful</span> 信州
+            </a>
+            <div class="nav-links">
+                <a href="#spots" class="nav-link">スポット</a>
+                <a href="#articles" class="nav-link">お出かけ情報</a>
+                <a href="#" class="nav-link">エリアから探す</a>
+                <a href="#" class="nav-link">特集</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <div class="hero-logo-icon">🐾</div>
+                <div class="hero-logo-text">
+                    <div class="hero-logo-en">WanDerful</div>
+                    <div class="hero-logo-ja">わんダフル信州</div>
+                </div>
+            </div>
+            <h1>
+                ペットと一緒に<br>
+                信州を楽しもう
+            </h1>
+            <p class="hero-lead">
+                愛犬・愛猫と訪れたい、長野県のとっておきスポットをご紹介
+            </p>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="エリアやスポット名で検索">
+                <button class="search-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="spots" class="featured-spots">
+        <div class="section-header">
+            <div class="section-tag">FEATURED SPOTS</div>
+            <h2 class="section-title">注目のスポット</h2>
+            <p class="section-desc">ペットと一緒に楽しめる、信州の人気スポットをピックアップしました</p>
+        </div>
+
+        <div class="spots-grid">
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-lake.jpg" alt="白樺湖">
+                    <div class="spot-tag">ドッグラン</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 茅野市・白樺湖エリア</div>
+                    <h3 class="spot-title">白樺湖ドッグリゾート わんわんビレッジ</h3>
+                    <p class="spot-desc">標高1,400mの高原リゾート。広大な天然芝のドッグランで愛犬と自由に遊べます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>大型犬OK</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🏠</span>
+                            <span>宿泊可</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-cafe.jpg" alt="カフェ">
+                    <div class="spot-tag">ペットカフェ</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 松本市・城下町エリア</div>
+                    <h3 class="spot-title">ペットカフェ アルプス</h3>
+                    <p class="spot-desc">松本城を眺めながらペットと寛げるテラス席が人気。信州食材を使った料理も絶品です。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>小型犬OK</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>☕</span>
+                            <span>テラス席</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-trail.jpg" alt="トレイル">
+                    <div class="spot-tag">自然体験</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 軽井沢町・高原エリア</div>
+                    <h3 class="spot-title">軽井沢 ペットトレイルコース</h3>
+                    <p class="spot-desc">ペット同伴OKの森林トレイル。四季折々の自然を愛犬と一緒に満喫できます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>リード必須</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🌲</span>
+                            <span>無料</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="categories" class="categories">
+        <div class="section-header">
+            <div class="section-tag">CATEGORIES</div>
+            <h2 class="section-title">カテゴリーから探す</h2>
+        </div>
+
+        <div class="category-tabs">
+            <div class="category-tab active">すべて</div>
+            <div class="category-tab">ドッグラン</div>
+            <div class="category-tab">ペットカフェ</div>
+            <div class="category-tab">宿泊施設</div>
+            <div class="category-tab">自然体験</div>
+            <div class="category-tab">温泉</div>
+            <div class="category-tab">ショッピング</div>
+        </div>
+
+        <div class="spots-grid">
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-dogrun.jpg" alt="ドッグラン">
+                    <div class="spot-tag">ドッグラン</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 上田市・菅平高原エリア</div>
+                    <h3 class="spot-title">菅平高原 わんわんパーク</h3>
+                    <p class="spot-desc">標高1,300mの爽やかな高原で、広々としたドッグランを満喫できます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>全犬種OK</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🅿️</span>
+                            <span>駐車場あり</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-hotel.jpg" alt="ペットホテル">
+                    <div class="spot-tag">宿泊施設</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 安曇野市・穂高エリア</div>
+                    <h3 class="spot-title">ペットリゾート 北アルプス</h3>
+                    <p class="spot-desc">北アルプスを望む絶景のペット専用リゾートホテル。温泉も楽しめます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>大型犬OK</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>♨️</span>
+                            <span>温泉あり</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-shopping.jpg" alt="ショッピング">
+                    <div class="spot-tag">ショッピング</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 長野市・善光寺エリア</div>
+                    <h3 class="spot-title">ペットグッズ専門店 信州わんわん堂</h3>
+                    <p class="spot-desc">地元の職人が作る信州産ペットグッズや、こだわりのフード・おやつが揃います。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🛍️</span>
+                            <span>試食可</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>ペット同伴OK</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-nature.jpg" alt="自然体験">
+                    <div class="spot-tag">自然体験</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 大町市・青木湖エリア</div>
+                    <h3 class="spot-title">青木湖 ペットカヌー体験</h3>
+                    <p class="spot-desc">愛犬と一緒にカヌーで湖上散歩。透明度の高い青木湖の絶景を楽しめます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>小中型犬</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>📅</span>
+                            <span>要予約</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-onsen.jpg" alt="温泉">
+                    <div class="spot-tag">温泉</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 山ノ内町・湯田中温泉エリア</div>
+                    <h3 class="spot-title">ペットと泊まれる温泉宿 山の湯</h3>
+                    <p class="spot-desc">ペット専用の温泉風呂完備。飼い主様も源泉かけ流しの温泉でくつろげます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>♨️</span>
+                            <span>ペット湯あり</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>全犬種OK</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-cafe2.jpg" alt="カフェ">
+                    <div class="spot-tag">ペットカフェ</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 諏訪市・諏訪湖エリア</div>
+                    <h3 class="spot-title">レイクサイドカフェ わんこ</h3>
+                    <p class="spot-desc">諏訪湖を一望できるテラス席で、愛犬と優雅なティータイムを。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>☕</span>
+                            <span>テラス席</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🍰</span>
+                            <span>犬用メニュー</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="more-btn-wrapper">
+            <a href="#" class="more-btn">
+                もっと見る
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15l5-5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="articles" class="articles">
+        <div class="section-header">
+            <div class="section-tag">PET TRAVEL GUIDE</div>
+            <h2 class="section-title">お出かけ情報</h2>
+            <p class="section-desc">ペットとのお出かけに役立つ情報をお届けします</p>
+        </div>
+
+        <div class="articles-grid">
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/article-car.jpg" alt="車でのお出かけ">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">お出かけ知識</span>
+                    <h3 class="article-title">愛犬と車でお出かけする時の注意点</h3>
+                    <p class="article-excerpt">長距離ドライブでも愛犬が快適に過ごせるコツや、準備しておきたいグッズをご紹介します。</p>
+                    <div class="article-meta">
+                        <span>2024.11.10</span>
+                        <span>5分で読めます</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/article-season.jpg" alt="季節のお出かけ">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">お出かけ知識</span>
+                    <h3 class="article-title">冬のペットお出かけ対策ガイド</h3>
+                    <p class="article-excerpt">寒い季節でも安心してお出かけできる、防寒対策や健康管理のポイントを解説します。</p>
+                    <div class="article-meta">
+                        <span>2024.11.05</span>
+                        <span>6分で読めます</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/article-manners.jpg" alt="マナー">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">お出かけ知識</span>
+                    <h3 class="article-title">公共施設でのペットマナー完全ガイド</h3>
+                    <p class="article-excerpt">他の利用者に配慮した、基本的なマナーやルールを分かりやすくまとめました。</p>
+                    <div class="article-meta">
+                        <span>2024.10.28</span>
+                        <span>4分で読めます</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/spot-feature.jpg" alt="特集">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">スポット紹介</span>
+                    <h3 class="article-title">絶景と愛犬を楽しむ！信州の紅葉スポット5選</h3>
+                    <p class="article-excerpt">ペット同伴OKの紅葉名所をピックアップ。秋の信州を愛犬と一緒に満喫しましょう。</p>
+                    <div class="article-meta">
+                        <span>2024.10.20</span>
+                        <span>7分で読めます</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/article-food.jpg" alt="グルメ">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">スポット紹介</span>
+                    <h3 class="article-title">ペット同伴OKの信州グルメスポット10選</h3>
+                    <p class="article-excerpt">愛犬・愛猫と一緒に楽しめる、長野県のおすすめレストラン＆カフェをご紹介。</p>
+                    <div class="article-meta">
+                        <span>2024.10.15</span>
+                        <span>8分で読めます</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/article-event.jpg" alt="イベント">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">スポット紹介</span>
+                    <h3 class="article-title">2024年冬・ペットと楽しめるイベント情報</h3>
+                    <p class="article-excerpt">長野県内で開催される、ペット同伴可能なイベントやマーケットの最新情報をお届け。</p>
+                    <div class="article-meta">
+                        <span>2024.11.12</span>
+                        <span>5分で読めます</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="more-btn-wrapper">
+            <a href="#" class="more-btn">
+                もっと見る
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15l5-5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <div class="cta">
+        <h2>もっと信州を楽しもう</h2>
+        <p>新着スポット情報やお得なキャンペーンをお届けします</p>
+        <a href="#" class="cta-btn">メールマガジン登録</a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>わんダフル信州について</h4>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+                    長野県のペットツーリズムを応援する、公式観光情報メディアです。
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>コンテンツ</h4>
+                <ul class="footer-links">
+                    <li><a href="#">スポット検索</a></li>
+                    <li><a href="#">お出かけ情報</a></li>
+                    <li><a href="#">エリアガイド</a></li>
+                    <li><a href="#">特集記事</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>サポート</h4>
+                <ul class="footer-links">
+                    <li><a href="#">よくある質問</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">利用規約</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>運営</h4>
+                <ul class="footer-links">
+                    <li><a href="#">長野県観光機構</a></li>
+                    <li><a href="#">掲載希望の事業者様へ</a></li>
+                    <li><a href="#">広告掲載について</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 WanDerful Shinshu - Nagano Prefecture Tourism Organization. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        hamburger?.addEventListener('click', () => {
+            // Mobile menu logic here
+        });
+
+        // Category tabs
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

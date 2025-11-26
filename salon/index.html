@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="わんわんサロン - 大切なペットを美しく、健康に。トリミング、シャンプー、爪切りなど、プロのトリマーが丁寧に対応いたします。">
+    <title>わんわんサロン | ペットトリミング・グルーミング専門店</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* --- Reset & Variables --- */
+        :root {
+            --primary: #EE8E8E; /* Sophisticated Coral */
+            --primary-hover: #E57373;
+            --secondary: #FDF5E6;
+            --accent: #88D4C5;
+            --text-main: #463C3C;
+            --text-sub: #8D8484;
+            --bg-body: #FFFBF7; /* Warm White */
+            --bg-card: #FFFFFF;
+            --shadow-soft: 0 10px 40px -10px rgba(238, 142, 142, 0.15);
+            --shadow-hover: 0 20px 50px -12px rgba(238, 142, 142, 0.25);
+            --radius-lg: 32px;
+            --radius-md: 20px;
+            --radius-sm: 12px;
+            --container-width: 1280px; /* widthを少し広げました */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            line-height: 1.8;
+            color: var(--text-main);
+            background: var(--bg-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+        ul { list-style: none; }
+        img, video { max-width: 100%; height: auto; display: block; }
+
+        /* --- Layout Utilities --- */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        /* --- Typography --- */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* 修正: 幅制限を緩和し、自然な改行になるように変更 */
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-sub);
+            margin-bottom: 5rem;
+            font-size: 1.05rem;
+            max-width: 1000px; /* 600pxから拡大 */
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 2;
+        }
+
+        /* --- Header --- */
+        header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            max-width: var(--container-width);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            z-index: 1000;
+            border-radius: 100px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.04);
+            border: 1px solid rgba(255,255,255,0.6);
+            padding: 0.8rem 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .line-btn {
+            background: linear-gradient(135deg, #06C755 0%, #05B04D 100%);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3);
+        }
+
+        .line-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(6, 199, 85, 0.4);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            object-fit: cover;
+            filter: brightness(0.95);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(255, 251, 247, 0.9) 0%, rgba(255, 251, 247, 0.4) 50%, rgba(255,255,255,0) 100%);
+            z-index: 1;
+        }
+
+        .hero > *:not(.hero-video):not(.hero-overlay):not(.hero-bg-slider) {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 修正: ヒーローエリアのコンテンツ幅を拡大 */
+        .hero-content-wrapper {
+            max-width: 1100px; /* 800pxから拡大 */
+            width: 100%;
+            padding: 0 2rem;
+            margin-top: 6rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem); /* フォントサイズも微調整 */
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            white-space: nowrap; /* PCでは勝手な改行を防ぐ */
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero-location-wrapper {
+            margin-bottom: 2rem;
+        }
+
+        .hero-location {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            padding: 0.8rem 2rem;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .hero-lead {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            margin-bottom: 3rem;
+            max-width: 900px; /* リード文の幅も確保 */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(238, 142, 142, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: var(--primary-hover);
+            box-shadow: 0 15px 35px rgba(238, 142, 142, 0.5);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--text-main);
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            border: 2px solid #EAEAEA;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-main);
+        }
+
+        /* --- News (Compact List) --- */
+        .news {
+            margin-top: -4rem; /* Overlap Hero */
+            padding-top: 0;
+            z-index: 10;
+        }
+
+        .news-list {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 2rem 3rem;
+            box-shadow: var(--shadow-soft);
+            max-width: 1000px; /* 幅拡大 */
+            margin: 0 auto;
+        }
+
+        .news-item {
+            display: grid;
+            grid-template-columns: auto auto 1fr;
+            gap: 2rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            align-items: center;
+        }
+
+        .news-item:last-child { border-bottom: none; }
+
+        .news-category {
+            font-size: 0.75rem;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            background: var(--bg-body);
+            color: var(--primary);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .news-date {
+            color: #bbb;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .news-title {
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .news-item:hover .news-title { color: var(--primary); }
+
+        /* --- Blog (Bento Cards) --- */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* PCでは3列固定 */
+            gap: 2rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-image {
+            aspect-ratio: 16/10;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .blog-card:hover .blog-image img { transform: scale(1.08); }
+
+        .blog-content { padding: 1.8rem; flex-grow: 1; }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .blog-category {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .blog-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+
+        /* --- Services (Modern Cards) --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* PCで3列固定 */
+            gap: 2.5rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 3.5rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .service-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            background: var(--bg-body);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-icon img {
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .service-price {
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-top: 1.5rem;
+        }
+
+        .service-price span {
+            font-size: 1rem;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        /* --- Before/After (修正版: 左寄せデフォルト) --- */
+        .before-after {
+            background: white;
+        }
+
+        .ba-slider-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        /* 修正: paddingの計算式をやめ、左寄せの標準的なスクロールに変更 */
+        .ba-grid {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 2rem 0;
+            max-width: var(--container-width); /* コンテナ幅に合わせる */
+            margin: 0 auto;
+            scrollbar-width: none;
+            /* 左端をコンテナのパディングに合わせる */
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .ba-grid::-webkit-scrollbar { display: none; }
+
+        .ba-item {
+            /* 修正: PCで3つ並ぶようなサイズ感に調整 (gap考慮) */
+            flex: 0 0 calc(33.333% - 1.4rem);
+            min-width: 320px; /* 最小幅保証 */
+            scroll-snap-align: start;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            background: white;
+            transition: transform 0.3s;
+        }
+
+        .ba-item:hover { transform: translateY(-5px); }
+
+        .ba-image {
+            aspect-ratio: 1;
+            background: #f0f0f0;
+        }
+
+        .ba-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .slider-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid #eee;
+            background: white;
+            color: var(--text-main);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+        }
+
+        .slider-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* --- Gallery (Masonry feel) --- */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 1.5rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 600px;
+        }
+
+        .gallery-main {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .gallery-main img { width: 100%; height: 100%; object-fit: cover; }
+
+        .gallery-thumbnails {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            height: 100%;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .gallery-thumb {
+            aspect-ratio: 1;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: all 0.3s;
+        }
+
+        .gallery-thumb.active, .gallery-thumb:hover {
+            opacity: 1;
+            transform: scale(0.98);
+        }
+
+        /* --- LINE CTA --- */
+        .line-cta {
+            background: var(--secondary);
+            margin: 4rem 2rem;
+            border-radius: var(--radius-lg);
+            max-width: var(--container-width);
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .line-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .line-benefit {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            width: 280px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .line-benefit-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+        .line-add-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: #06C755;
+            color: white;
+            padding: 1.2rem 5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 30px rgba(6, 199, 85, 0.3);
+            transition: all 0.3s;
+        }
+
+        .line-add-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(6, 199, 85, 0.4);
+        }
+
+        /* --- Price Table --- */
+        .price-table {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .price-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            padding: 1.5rem 2.5rem;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .price-row.header {
+            background: var(--text-main);
+            color: white;
+            font-weight: 700;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+        }
+
+        .price-name { font-weight: 700; }
+        .price-amount { text-align: center; font-weight: 500; }
+        .price-row:not(.header) .price-amount { font-family: monospace; font-size: 1.1rem; color: var(--primary); font-weight: 700; }
+
+        .price-note {
+            max-width: 1000px;
+            margin: 1rem auto 0;
+            text-align: right;
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* --- Access --- */
+        .access-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+            align-items: center;
+        }
+
+        .access-info {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .map {
+            width: 100%;
+            height: 450px;
+            background: #EEE;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #333;
+            color: white;
+            padding: 5rem 2rem 2rem;
+            margin-top: 4rem;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-about h3 { margin-bottom: 1.5rem; font-size: 1.4rem; color: var(--primary); }
+        .footer-section h4 { color: #888; margin-bottom: 1.5rem; font-size: 0.9rem; }
+        
+        .footer-links a {
+            color: #ccc;
+            line-height: 2.2;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: white; padding-left: 5px; }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        /* --- Mobile & Responsive --- */
+        .hamburger { display: none; cursor: pointer; }
+        .mobile-menu { display: none; }
+
+        @media (max-width: 1024px) {
+            :root { --container-width: 100%; }
+            header { width: 90%; }
+            .news-list { margin: 0 2rem; }
+            .gallery-container { height: auto; grid-template-columns: 1fr; }
+            .gallery-thumbnails { height: auto; grid-template-columns: repeat(3, 1fr); }
+            .hero h1 { white-space: normal; } /* タブレット以下は改行許可 */
+            
+            .blog-grid, .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 1rem; width: 95%; }
+            .nav-links { display: none; }
+            
+            /* Hamburger */
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                z-index: 1100;
+            }
+            .hamburger span {
+                width: 24px;
+                height: 2px;
+                background: var(--text-main);
+                transition: 0.3s;
+            }
+            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+            /* Mobile Menu */
+            .mobile-menu {
+                display: block;
+                position: fixed;
+                top: 0; left: 0; width: 100%; height: 100vh;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(10px);
+                padding: 6rem 2rem;
+                transform: translateY(-100%);
+                transition: 0.4s ease-in-out;
+                z-index: 1050;
+            }
+            .mobile-menu.active { transform: translateY(0); }
+            .mobile-menu a {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+                color: var(--text-main);
+            }
+
+            .hero h1 { font-size: 2rem; line-height: 1.4; }
+            .hero-buttons { flex-direction: column; gap: 1rem; }
+            .news-item { grid-template-columns: 1fr; gap: 0.5rem; }
+            
+            .blog-grid, .services-grid { grid-template-columns: 1fr; }
+
+            .access-content, .footer-content, .line-benefits {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .price-row { grid-template-columns: 1.5fr 1fr; }
+            .price-row > div:last-child { display: none; }
+            
+            /* Mobile Slider Adjustments */
+            .ba-grid { padding-left: 2rem; padding-right: 2rem; }
+            .ba-item { flex: 0 0 85vw; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                🐾 わんわんサロン
+            </div>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">サービス</a>
+                <a href="#price" class="nav-link">料金</a>
+                <a href="#access" class="nav-link">アクセス</a>
+                <a href="#news" class="nav-link">お知らせ</a>
+                <a href="#blog" class="nav-link">ブログ</a>
+                <a href="#line" class="line-btn">
+                    <span>📱</span>
+                    LINE予約
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services">サービス</a>
+            <a href="#price">料金</a>
+            <a href="#access">アクセス</a>
+            <a href="#news">お知らせ</a>
+            <a href="#blog">ブログ</a>
+            <a href="#line">LINE予約</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="/salon/images/salon-hero-video.mp4" type="video/mp4">
+            <source src="/salon/images/salon-hero-video.webm" type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content-wrapper">
+            <span class="hero-tagline">わんわんサロン</span>
+            <h1>
+                大切なペットを<br>
+                もっと美しく、もっと健康に
+            </h1>
+            
+            <div class="hero-location-wrapper">
+                <div class="hero-location">
+                    📍 東京メトロ表参道駅から徒歩3分
+                </div>
+            </div>
+            
+            <p class="hero-lead">
+                経験豊富なトリマーが、わんちゃん・ねこちゃんの個性と魅力を最大限に引き出してまいります。
+                初回ご利用のお客様には特別に20%割引をご用意しております。LINEにて、お気軽にご相談くださいませ。
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#line" class="btn-primary">
+                    <span>📱</span>
+                    LINEで予約する
+                </a>
+                <a href="tel:0312345678" class="btn-secondary">
+                    📞 電話で予約
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news">
+        <div class="news-list">
+            <div class="news-item">
+                <div class="news-date">2024.11.10</div>
+                <span class="news-category">重要</span>
+                <a href="#" class="news-title">年末年始の営業時間のご案内</a>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024.11.05</div>
+                <span class="news-category">お知らせ</span>
+                <a href="#" class="news-title">冬の被毛ケアキャンペーン実施中（11月末まで）</a>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024.10.28</div>
+                <span class="news-category">イベント</span>
+                <a href="#" class="news-title">ペットの健康相談会を開催いたします</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">✏️ ブログ</h2>
+            <p class="section-subtitle">ペットの健やかな暮らしを支える、日々のケアやお手入れの知識をお伝えしております</p>
+            
+            <div class="blog-grid">
+                <a href="#" class="blog-card">
+                    <div class="blog-image">
+                        <img src="/salon/images/blog1.jpg" alt="冬の被毛ケア">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">ケア情報</span>
+                            <span>2024.11.08</span>
+                        </div>
+                        <h3 class="blog-title">冬季の被毛ケアについて</h3>
+                        <p class="blog-excerpt">寒い季節に向けて、大切なペットの被毛を守るケア方法をご紹介いたします。</p>
+                    </div>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="blog-image">
+                        <img src="/salon/images/blog2.jpg" alt="トリミングの頻度">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">トリミング</span>
+                            <span>2024.11.01</span>
+                        </div>
+                        <h3 class="blog-title">トリミングの適切な頻度とは</h3>
+                        <p class="blog-excerpt">犬種や毛質によって異なるトリミングの最適な頻度について詳しく解説いたします。</p>
+                    </div>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="blog-image">
+                        <img src="/salon/images/blog3.jpg" alt="シャンプー選び">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">商品紹介</span>
+                            <span>2024.10.25</span>
+                        </div>
+                        <h3 class="blog-title">ペットに優しいシャンプーの選び方</h3>
+                        <p class="blog-excerpt">敏感肌のペットにも安心してご使用いただけるシャンプーの選び方をご案内いたします。</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">🌟 サービスのご案内</h2>
+            <p class="section-subtitle">わんちゃん・ねこちゃんそれぞれの個性に寄り添い、プロのトリマーが心を込めてケアいたします</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/salon/images/icon-trimming.png" alt="トリミング">
+                    </div>
+                    <h3>トリミングコース</h3>
+                    <p>カット、シャンプー、ブロー、爪切り、耳掃除、肛門腺絞りを含む充実のフルコース。わんちゃん・ねこちゃんの個性を引き出す、丁寧な仕上がりをお約束いたします</p>
+                    <div class="service-price">
+                        ¥5,500<span>〜</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/salon/images/icon-shampoo.png" alt="シャンプー">
+                    </div>
+                    <h3>シャンプーコース</h3>
+                    <p>シャンプー、ブロー、爪切り、耳掃除、肛門腺絞りのベーシックケア。皮膚や被毛の健康を第一に、優しく丁寧に洗い上げます</p>
+                    <div class="service-price">
+                        ¥3,500<span>〜</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/salon/images/icon-care.png" alt="部分ケア">
+                    </div>
+                    <h3>部分ケア</h3>
+                    <p>爪切り、耳掃除、足裏カットなど、気になる部分だけのケアもお気軽にご利用いただけます。日々のお手入れをサポートいたします</p>
+                    <div class="service-price">
+                        ¥1,000<span>〜</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery-ba" class="before-after">
+        <div class="container">
+            <h2 class="section-title">✨ ビフォーアフター</h2>
+            <p class="section-subtitle">トリミング前後の変化をご覧いただけます。それぞれのペットの魅力が引き立つ仕上がりを心がけております</p>
+            
+            <div class="ba-slider-container">
+                <div class="ba-grid" id="baSlider">
+                    <div class="ba-item">
+                        <div class="ba-image">
+                            <img src="/salon/images/salon-ba1.jpg" alt="トイプードルのトリミング">
+                        </div>
+                        <div class="ba-info">
+                            <h4>🐩 トイプードル（3歳）</h4>
+                            <p>ふわふわテディベアカット</p>
+                        </div>
+                    </div>
+                    <div class="ba-item">
+                        <div class="ba-image">
+                            <img src="/salon/images/salon-ba2.jpg" alt="柴犬のシャンプー">
+                        </div>
+                        <div class="ba-info">
+                            <h4>🐕 柴犬（5歳）</h4>
+                            <p>シャンプー＆ブローでツヤツヤに</p>
+                        </div>
+                    </div>
+                    <div class="ba-item">
+                        <div class="ba-image">
+                            <img src="/salon/images/salon-ba3.jpg" alt="ミックス犬のカット">
+                        </div>
+                        <div class="ba-info">
+                            <h4>🐶 ミックス犬（2歳）</h4>
+                            <p>サマーカットですっきり</p>
+                        </div>
+                    </div>
+                    <div class="ba-item">
+                        <div class="ba-image">
+                            <img src="/salon/images/salon-ba4.jpg" alt="チワワのトリミング">
+                        </div>
+                        <div class="ba-info">
+                            <h4>🐕 チワワ（4歳）</h4>
+                            <p>ライオンカットで個性的に</p>
+                        </div>
+                    </div>
+                    <div class="ba-item">
+                        <div class="ba-image">
+                            <img src="/salon/images/salon-ba5.jpg" alt="ポメラニアンのトリミング">
+                        </div>
+                        <div class="ba-info">
+                            <h4>🦊 ポメラニアン（2歳）</h4>
+                            <p>まんまるカットで可愛く</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="slider-btn" onclick="slideBA('prev')">←</button>
+                    <button class="slider-btn" onclick="slideBA('next')">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">📸 サロンギャラリー</h2>
+            <p class="section-subtitle">清潔で落ち着いた空間づくりを大切にしております。安心してお過ごしいただける環境をご用意してお待ちしております</p>
+            
+            <div class="gallery-container">
+                <div class="gallery-main" id="galleryMain">
+                    <img src="/salon/images/salon-exterior.jpg" alt="サロン外観">
+                </div>
+                <div class="gallery-thumbnails" id="galleryThumbs">
+                    <div class="gallery-thumb active" onclick="changeGalleryImage(0)">
+                        <img src="/salon/images/salon-exterior.jpg" alt="サロン外観">
+                    </div>
+                    <div class="gallery-thumb" onclick="changeGalleryImage(1)">
+                        <img src="/salon/images/salon-interior1.jpg" alt="店内の様子1">
+                    </div>
+                    <div class="gallery-thumb" onclick="changeGalleryImage(2)">
+                        <img src="/salon/images/salon-interior2.jpg" alt="店内の様子2">
+                    </div>
+                    <div class="gallery-thumb" onclick="changeGalleryImage(3)">
+                        <img src="/salon/images/salon-equipment1.jpg" alt="トリミング設備">
+                    </div>
+                    <div class="gallery-thumb" onclick="changeGalleryImage(4)">
+                        <img src="/salon/images/salon-equipment2.jpg" alt="シャンプー設備">
+                    </div>
+                    <div class="gallery-thumb" onclick="changeGalleryImage(5)">
+                        <img src="/salon/images/salon-waiting.jpg" alt="待合スペース">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="line" class="line-cta">
+        <div class="container" style="padding: 4rem 2rem;">
+            <h2 class="section-title" style="color: var(--text-main);">📱 LINEでのご予約が便利です</h2>
+            <p class="section-subtitle" style="margin-bottom: 3rem;">24時間いつでもご予約やご相談を承っております。季節のキャンペーンなど、お得な情報もお届けしております</p>
+            
+            <div class="line-benefits">
+                <div class="line-benefit">
+                    <div class="line-benefit-icon">🎁</div>
+                    <h4>お友達登録で特典</h4>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">初回のご利用時に20%割引となるクーポンをプレゼントしております</p>
+                </div>
+                <div class="line-benefit">
+                    <div class="line-benefit-icon">⏰</div>
+                    <h4>24時間ご予約可能</h4>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">営業時間外でも、いつでもご予約やご相談をお受けしております</p>
+                </div>
+                <div class="line-benefit">
+                    <div class="line-benefit-icon">📸</div>
+                    <h4>写真でご相談</h4>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">わんちゃんのお写真をお送りいただければ、最適なスタイルをご提案いたします</p>
+                </div>
+            </div>
+
+            <a href="https://line.me/R/ti/p/@example" class="line-add-btn">
+                <span style="font-size: 1.5rem;">📱</span>
+                LINEで友だち追加
+            </a>
+        </div>
+    </section>
+
+    <section id="price" class="price">
+        <div class="container">
+            <h2 class="section-title">💰 料金表</h2>
+            <p class="section-subtitle">わんちゃんのサイズや犬種によって料金が異なります。詳しくはお気軽にお問い合わせくださいませ</p>
+            
+            <div class="price-table">
+                <div class="price-row header">
+                    <div>メニュー</div>
+                    <div class="price-amount">小型犬</div>
+                    <div class="price-amount">中型犬</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-name">トリミングコース</div>
+                    <div class="price-amount">¥5,500〜</div>
+                    <div class="price-amount">¥7,500〜</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-name">シャンプーコース</div>
+                    <div class="price-amount">¥3,500〜</div>
+                    <div class="price-amount">¥5,000〜</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-name">爪切り</div>
+                    <div class="price-amount">¥1,000</div>
+                    <div class="price-amount">¥1,000</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-name">耳掃除</div>
+                    <div class="price-amount">¥1,000</div>
+                    <div class="price-amount">¥1,000</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-name">足裏カット</div>
+                    <div class="price-amount">¥1,000</div>
+                    <div class="price-amount">¥1,000</div>
+                </div>
+            </div>
+            
+            <p class="price-note">
+                料金は税込表示です
+            </p>
+        </div>
+    </section>
+
+    <section id="access" class="access">
+        <div class="container">
+            <h2 class="section-title">🏠 アクセス</h2>
+            <p class="section-subtitle">駅から徒歩圏内の好立地。わんちゃんとご一緒に、お気軽にお立ち寄りくださいませ</p>
+            
+            <div class="access-content">
+                <div class="access-info">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 2rem;">わんわんサロン</h3>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">📍 住所</div>
+                        <div>
+                            〒150-0001<br>
+                            東京都渋谷区神宮前1-2-3<br>
+                            ペットビル2F
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">🚃 アクセス</div>
+                        <div>
+                            JR原宿駅から徒歩5分<br>
+                            東京メトロ明治神宮前駅から徒歩3分
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">⏰ 営業時間</div>
+                        <div>
+                            10:00〜19:00<br>
+                            定休日：毎週水曜日
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">📞 電話番号</div>
+                        <div style="font-size: 1.2rem; font-weight: 700;">
+                            03-1234-5678
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map">
+                    <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#aaa;">
+                        【Google Map埋め込み】
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>🐾 わんわんサロン</h3>
+                <p style="font-size: 0.95rem; opacity: 0.8; line-height: 1.8;">
+                    経験豊富なトリマーが、大切なペットを丁寧にケアいたします。<br>
+                    初めてのお客様もお気軽にご相談くださいませ。
+                </p>
+                <div style="margin-top: 2rem; opacity: 0.9;">
+                    〒150-0001　東京都渋谷区神宮前1-2-3ペットビル2F<br>
+                    📞 03-1234-5678
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>メニュー</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#price">料金</a></li>
+                    <li><a href="#access">アクセス</a></li>
+                    <li><a href="#news">お知らせ</a></li>
+                    <li><a href="#blog">ブログ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>ご予約・お問い合わせ</h4>
+                <ul class="footer-links">
+                    <li><a href="#line">LINE予約</a></li>
+                    <li><a href="tel:0312345678">お電話でのご予約</a></li>
+                </ul>
+                <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="display:block; margin-bottom:0.5rem;">営業時間</strong>
+                    10:00〜19:00<br>
+                    定休日：毎週水曜日
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 わんわんサロン. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // ハンバーガーメニュー
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // モバイルメニューのリンククリック時に閉じる
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const hamburger = document.querySelector('.hamburger');
+                const mobileMenu = document.getElementById('mobileMenu');
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // ビフォーアフタースライダー
+        function slideBA(direction) {
+            const slider = document.getElementById('baSlider');
+            const itemWidth = document.querySelector('.ba-item').offsetWidth + 32; // width + gap
+            
+            if (direction === 'next') {
+                slider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+            } else {
+                slider.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+            }
+        }
+
+        // スムーズスクロール（ヘッダーの高さ考慮）
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // ギャラリー画像切り替え
+        const galleryImages = [
+            '/salon/images/salon-exterior.jpg',
+            '/salon/images/salon-interior1.jpg',
+            '/salon/images/salon-interior2.jpg',
+            '/salon/images/salon-equipment1.jpg',
+            '/salon/images/salon-equipment2.jpg',
+            '/salon/images/salon-waiting.jpg'
+        ];
+
+        function changeGalleryImage(index) {
+            const mainImage = document.querySelector('#galleryMain img');
+            const thumbs = document.querySelectorAll('.gallery-thumb');
+            
+            mainImage.style.opacity = 0;
+            
+            setTimeout(() => {
+                mainImage.src = galleryImages[index];
+                mainImage.style.opacity = 1;
+            }, 200);
+            
+            thumbs.forEach((thumb, i) => {
+                if (i === index) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
