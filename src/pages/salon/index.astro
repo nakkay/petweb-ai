@@ -1,0 +1,535 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/salon.css';
+---
+
+<BaseLayout 
+    title="わんわんサロン | ペットトリミング・グルーミング専門店"
+    description="わんわんサロン - 大切なペットを美しく、健康に。トリミング、シャンプー、爪切りなど、プロのトリマーが丁寧に対応いたします。"
+>
+    <header>
+        <nav>
+            <div class="logo">
+                🐾 わんわんサロン
+            </div>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">サービス</a>
+                <a href="#price" class="nav-link">料金</a>
+                <a href="#access" class="nav-link">アクセス</a>
+                <a href="#news" class="nav-link">お知らせ</a>
+                <a href="#blog" class="nav-link">ブログ</a>
+                <a href="#line" class="line-btn">
+                    <span>📱</span>
+                    LINE予約
+                </a>
+            </div>
+            <div class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services">サービス</a>
+            <a href="#price">料金</a>
+            <a href="#access">アクセス</a>
+            <a href="#news">お知らせ</a>
+            <a href="#blog">ブログ</a>
+            <a href="#line">LINE予約</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="/salon/images/salon-hero-video.mp4" type="video/mp4">
+            <source src="/salon/images/salon-hero-video.webm" type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content-wrapper">
+            <span class="hero-tagline">わんわんサロン</span>
+            <h1>
+                大切なペットを<br>
+                もっと美しく、もっと健康に
+            </h1>
+            
+            <div class="hero-location-wrapper">
+                <div class="hero-location">
+                    📍 東京メトロ表参道駅から徒歩3分
+                </div>
+            </div>
+            
+            <p class="hero-lead">
+                経験豊富なトリマーが、わんちゃん・ねこちゃんの個性と魅力を最大限に引き出してまいります。
+                初回ご利用のお客様には特別に20%割引をご用意しております。LINEにて、お気軽にご相談くださいませ。
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#line" class="btn-primary">
+                    <span>📱</span>
+                    LINEで予約する
+                </a>
+                <a href="tel:0312345678" class="btn-secondary">
+                    📞 電話で予約
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news">
+        <div class="news-list">
+            <div class="news-item">
+                <div class="news-date">2024.11.10</div>
+                <span class="news-category">重要</span>
+                <a href="#" class="news-title">年末年始の営業時間のご案内</a>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024.11.05</div>
+                <span class="news-category">お知らせ</span>
+                <a href="#" class="news-title">冬の被毛ケアキャンペーン実施中（11月末まで）</a>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024.10.28</div>
+                <span class="news-category">イベント</span>
+                <a href="#" class="news-title">ペットの健康相談会を開催いたします</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">✏️ ブログ</h2>
+            <p class="section-subtitle">ペットの健やかな暮らしを支える、日々のケアやお手入れの知識をお伝えしております</p>
+            
+            <div class="blog-grid">
+                <a href="#" class="blog-card">
+                    <div class="blog-image">
+                        <img src="/salon/images/blog1.jpg" alt="冬の被毛ケア">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">ケア情報</span>
+                            <span>2024.11.08</span>
+                        </div>
+                        <h3 class="blog-title">冬季の被毛ケアについて</h3>
+                        <p class="blog-excerpt">寒い季節に向けて、大切なペットの被毛を守るケア方法をご紹介いたします。</p>
+                    </div>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="blog-image">
+                        <img src="/salon/images/blog2.jpg" alt="トリミングの頻度">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">トリミング</span>
+                            <span>2024.11.01</span>
+                        </div>
+                        <h3 class="blog-title">トリミングの適切な頻度とは</h3>
+                        <p class="blog-excerpt">犬種や毛質によって異なるトリミングの最適な頻度について詳しく解説いたします。</p>
+                    </div>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="blog-image">
+                        <img src="/salon/images/blog3.jpg" alt="シャンプー選び">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">商品紹介</span>
+                            <span>2024.10.25</span>
+                        </div>
+                        <h3 class="blog-title">ペットに優しいシャンプーの選び方</h3>
+                        <p class="blog-excerpt">敏感肌のペットにも安心してご使用いただけるシャンプーの選び方をご案内いたします。</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">🌟 サービスのご案内</h2>
+            <p class="section-subtitle">わんちゃん・ねこちゃんそれぞれの個性に寄り添い、プロのトリマーが心を込めてケアいたします</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/salon/images/icon-trimming.png" alt="トリミング">
+                    </div>
+                    <h3>トリミングコース</h3>
+                    <p>カット、シャンプー、ブロー、爪切り、耳掃除、肛門腺絞りを含む充実のフルコース。わんちゃん・ねこちゃんの個性を引き出す、丁寧な仕上がりをお約束いたします</p>
+                    <div class="service-price">
+                        ¥5,500<span>〜</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/salon/images/icon-shampoo.png" alt="シャンプー">
+                    </div>
+                    <h3>シャンプーコース</h3>
+                    <p>シャンプー、ブロー、爪切り、耳掃除、肛門腺絞りのベーシックケア。皮膚や被毛の健康を第一に、優しく丁寧に洗い上げます</p>
+                    <div class="service-price">
+                        ¥3,500<span>〜</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/salon/images/icon-care.png" alt="部分ケア">
+                    </div>
+                    <h3>部分ケア</h3>
+                    <p>爪切り、耳掃除、足裏カットなど、気になる部分だけのケアもお気軽にご利用いただけます。日々のお手入れをサポートいたします</p>
+                    <div class="service-price">
+                        ¥1,000<span>〜</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery-ba" class="before-after">
+        <div class="container">
+            <h2 class="section-title">✨ ビフォーアフター</h2>
+            <p class="section-subtitle">トリミング前後の変化をご覧いただけます。それぞれのペットの魅力が引き立つ仕上がりを心がけております</p>
+            
+            <div class="ba-slider-container">
+                <div class="ba-grid" id="baSlider">
+                    <div class="ba-item">
+                        <div class="ba-image">
+                            <img src="/salon/images/salon-ba1.jpg" alt="トイプードルのトリミング">
+                        </div>
+                        <div class="ba-info">
+                            <h4>🐩 トイプードル（3歳）</h4>
+                            <p>ふわふわテディベアカット</p>
+                        </div>
+                    </div>
+                    <div class="ba-item">
+                        <div class="ba-image">
+                            <img src="/salon/images/salon-ba2.jpg" alt="柴犬のシャンプー">
+                        </div>
+                        <div class="ba-info">
+                            <h4>🐕 柴犬（5歳）</h4>
+                            <p>シャンプー＆ブローでツヤツヤに</p>
+                        </div>
+                    </div>
+                    <div class="ba-item">
+                        <div class="ba-image">
+                            <img src="/salon/images/salon-ba3.jpg" alt="ミックス犬のカット">
+                        </div>
+                        <div class="ba-info">
+                            <h4>🐶 ミックス犬（2歳）</h4>
+                            <p>サマーカットですっきり</p>
+                        </div>
+                    </div>
+                    <div class="ba-item">
+                        <div class="ba-image">
+                            <img src="/salon/images/salon-ba4.jpg" alt="チワワのトリミング">
+                        </div>
+                        <div class="ba-info">
+                            <h4>🐕 チワワ（4歳）</h4>
+                            <p>ライオンカットで個性的に</p>
+                        </div>
+                    </div>
+                    <div class="ba-item">
+                        <div class="ba-image">
+                            <img src="/salon/images/salon-ba5.jpg" alt="ポメラニアンのトリミング">
+                        </div>
+                        <div class="ba-info">
+                            <h4>🦊 ポメラニアン（2歳）</h4>
+                            <p>まんまるカットで可愛く</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="slider-btn" id="baPrevBtn">←</button>
+                    <button class="slider-btn" id="baNextBtn">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">📸 サロンギャラリー</h2>
+            <p class="section-subtitle">清潔で落ち着いた空間づくりを大切にしております。安心してお過ごしいただける環境をご用意してお待ちしております</p>
+            
+            <div class="gallery-container">
+                <div class="gallery-main" id="galleryMain">
+                    <img src="/salon/images/salon-exterior.jpg" alt="サロン外観">
+                </div>
+                <div class="gallery-thumbnails" id="galleryThumbs">
+                    <div class="gallery-thumb active" data-index="0">
+                        <img src="/salon/images/salon-exterior.jpg" alt="サロン外観">
+                    </div>
+                    <div class="gallery-thumb" data-index="1">
+                        <img src="/salon/images/salon-interior1.jpg" alt="店内の様子1">
+                    </div>
+                    <div class="gallery-thumb" data-index="2">
+                        <img src="/salon/images/salon-interior2.jpg" alt="店内の様子2">
+                    </div>
+                    <div class="gallery-thumb" data-index="3">
+                        <img src="/salon/images/salon-equipment1.jpg" alt="トリミング設備">
+                    </div>
+                    <div class="gallery-thumb" data-index="4">
+                        <img src="/salon/images/salon-equipment2.jpg" alt="シャンプー設備">
+                    </div>
+                    <div class="gallery-thumb" data-index="5">
+                        <img src="/salon/images/salon-waiting.jpg" alt="待合スペース">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="line" class="line-cta">
+        <div class="container" style="padding: 4rem 2rem;">
+            <h2 class="section-title" style="color: var(--text-main);">📱 LINEでのご予約が便利です</h2>
+            <p class="section-subtitle" style="margin-bottom: 3rem;">24時間いつでもご予約やご相談を承っております。季節のキャンペーンなど、お得な情報もお届けしております</p>
+            
+            <div class="line-benefits">
+                <div class="line-benefit">
+                    <div class="line-benefit-icon">🎁</div>
+                    <h4>お友達登録で特典</h4>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">初回のご利用時に20%割引となるクーポンをプレゼントしております</p>
+                </div>
+                <div class="line-benefit">
+                    <div class="line-benefit-icon">⏰</div>
+                    <h4>24時間ご予約可能</h4>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">営業時間外でも、いつでもご予約やご相談をお受けしております</p>
+                </div>
+                <div class="line-benefit">
+                    <div class="line-benefit-icon">📸</div>
+                    <h4>写真でご相談</h4>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">わんちゃんのお写真をお送りいただければ、最適なスタイルをご提案いたします</p>
+                </div>
+            </div>
+
+            <a href="https://line.me/R/ti/p/@example" class="line-add-btn">
+                <span style="font-size: 1.5rem;">📱</span>
+                LINEで友だち追加
+            </a>
+        </div>
+    </section>
+
+    <section id="price" class="price">
+        <div class="container">
+            <h2 class="section-title">💰 料金表</h2>
+            <p class="section-subtitle">わんちゃんのサイズや犬種によって料金が異なります。詳しくはお気軽にお問い合わせくださいませ</p>
+            
+            <div class="price-table">
+                <div class="price-row header">
+                    <div>メニュー</div>
+                    <div class="price-amount">小型犬</div>
+                    <div class="price-amount">中型犬</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-name">トリミングコース</div>
+                    <div class="price-amount">¥5,500〜</div>
+                    <div class="price-amount">¥7,500〜</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-name">シャンプーコース</div>
+                    <div class="price-amount">¥3,500〜</div>
+                    <div class="price-amount">¥5,000〜</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-name">爪切り</div>
+                    <div class="price-amount">¥1,000</div>
+                    <div class="price-amount">¥1,000</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-name">耳掃除</div>
+                    <div class="price-amount">¥1,000</div>
+                    <div class="price-amount">¥1,000</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-name">足裏カット</div>
+                    <div class="price-amount">¥1,000</div>
+                    <div class="price-amount">¥1,000</div>
+                </div>
+            </div>
+            
+            <p class="price-note">
+                料金は税込表示です
+            </p>
+        </div>
+    </section>
+
+    <section id="access" class="access">
+        <div class="container">
+            <h2 class="section-title">🏠 アクセス</h2>
+            <p class="section-subtitle">駅から徒歩圏内の好立地。わんちゃんとご一緒に、お気軽にお立ち寄りくださいませ</p>
+            
+            <div class="access-content">
+                <div class="access-info">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 2rem;">わんわんサロン</h3>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">📍 住所</div>
+                        <div>
+                            〒150-0001<br>
+                            東京都渋谷区神宮前1-2-3<br>
+                            ペットビル2F
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">🚃 アクセス</div>
+                        <div>
+                            JR原宿駅から徒歩5分<br>
+                            東京メトロ明治神宮前駅から徒歩3分
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">⏰ 営業時間</div>
+                        <div>
+                            10:00〜19:00<br>
+                            定休日：毎週水曜日
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">📞 電話番号</div>
+                        <div style="font-size: 1.2rem; font-weight: 700;">
+                            03-1234-5678
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map">
+                    <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#aaa;">
+                        【Google Map埋め込み】
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>🐾 わんわんサロン</h3>
+                <p style="font-size: 0.95rem; opacity: 0.8; line-height: 1.8;">
+                    経験豊富なトリマーが、大切なペットを丁寧にケアいたします。<br>
+                    初めてのお客様もお気軽にご相談くださいませ。
+                </p>
+                <div style="margin-top: 2rem; opacity: 0.9;">
+                    〒150-0001　東京都渋谷区神宮前1-2-3ペットビル2F<br>
+                    📞 03-1234-5678
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>メニュー</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#price">料金</a></li>
+                    <li><a href="#access">アクセス</a></li>
+                    <li><a href="#news">お知らせ</a></li>
+                    <li><a href="#blog">ブログ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>ご予約・お問い合わせ</h4>
+                <ul class="footer-links">
+                    <li><a href="#line">LINE予約</a></li>
+                    <li><a href="tel:0312345678">お電話でのご予約</a></li>
+                </ul>
+                <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="display:block; margin-bottom:0.5rem;">営業時間</strong>
+                    10:00〜19:00<br>
+                    定休日：毎週水曜日
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 わんわんサロン. All rights reserved.
+        </div>
+    </footer>
+
+    <Fragment slot="scripts">
+        <script is:inline>
+            // ハンバーガーメニュー
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburgerBtn.addEventListener('click', () => {
+                hamburgerBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // モバイルメニューのリンククリック時に閉じる
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburgerBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // ビフォーアフタースライダー
+            const baSlider = document.getElementById('baSlider');
+            const baPrevBtn = document.getElementById('baPrevBtn');
+            const baNextBtn = document.getElementById('baNextBtn');
+
+            function slideBA(direction) {
+                const itemWidth = document.querySelector('.ba-item').offsetWidth + 32; // width + gap
+                
+                if (direction === 'next') {
+                    baSlider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+                } else {
+                    baSlider.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+                }
+            }
+
+            baPrevBtn.addEventListener('click', () => slideBA('prev'));
+            baNextBtn.addEventListener('click', () => slideBA('next'));
+
+            // スムーズスクロール（ヘッダーの高さ考慮）
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerOffset = 100;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
+            // ギャラリー画像切り替え
+            const galleryImages = [
+                '/salon/images/salon-exterior.jpg',
+                '/salon/images/salon-interior1.jpg',
+                '/salon/images/salon-interior2.jpg',
+                '/salon/images/salon-equipment1.jpg',
+                '/salon/images/salon-equipment2.jpg',
+                '/salon/images/salon-waiting.jpg'
+            ];
+
+            const thumbs = document.querySelectorAll('.gallery-thumb');
+            const mainImage = document.querySelector('#galleryMain img');
+
+            thumbs.forEach(thumb => {
+                thumb.addEventListener('click', () => {
+                    const index = parseInt(thumb.dataset.index);
+                    
+                    mainImage.style.opacity = 0;
+                    
+                    setTimeout(() => {
+                        mainImage.src = galleryImages[index];
+                        mainImage.style.opacity = 1;
+                    }, 200);
+                    
+                    thumbs.forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                });
+            });
+        </script>
+    </Fragment>
+</BaseLayout>
+
+

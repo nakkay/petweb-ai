@@ -1,0 +1,479 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/media.css';
+---
+
+<BaseLayout 
+    title="わんダフル信州 | ペットと楽しむ長野県観光"
+    description="わんダフル信州 - 長野県のペットと楽しむ観光情報メディア。愛犬・愛猫と一緒に訪れたいスポットやお出かけ情報を発信しています。"
+>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="en">WanDerful</span> 信州
+            </a>
+            <div class="nav-links">
+                <a href="#spots" class="nav-link">スポット</a>
+                <a href="#articles" class="nav-link">お出かけ情報</a>
+                <a href="#" class="nav-link">エリアから探す</a>
+                <a href="#" class="nav-link">特集</a>
+            </div>
+            <div class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <div class="hero-logo-icon">🐾</div>
+                <div class="hero-logo-text">
+                    <div class="hero-logo-en">WanDerful</div>
+                    <div class="hero-logo-ja">わんダフル信州</div>
+                </div>
+            </div>
+            <h1>
+                ペットと一緒に<br>
+                信州を楽しもう
+            </h1>
+            <p class="hero-lead">
+                愛犬・愛猫と訪れたい、長野県のとっておきスポットをご紹介
+            </p>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="エリアやスポット名で検索">
+                <button class="search-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="spots" class="featured-spots">
+        <div class="section-header">
+            <div class="section-tag">FEATURED SPOTS</div>
+            <h2 class="section-title">注目のスポット</h2>
+            <p class="section-desc">ペットと一緒に楽しめる、信州の人気スポットをピックアップしました</p>
+        </div>
+
+        <div class="spots-grid">
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-lake.jpg" alt="白樺湖">
+                    <div class="spot-tag">ドッグラン</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 茅野市・白樺湖エリア</div>
+                    <h3 class="spot-title">白樺湖ドッグリゾート わんわんビレッジ</h3>
+                    <p class="spot-desc">標高1,400mの高原リゾート。広大な天然芝のドッグランで愛犬と自由に遊べます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>大型犬OK</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🏠</span>
+                            <span>宿泊可</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-cafe.jpg" alt="カフェ">
+                    <div class="spot-tag">ペットカフェ</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 松本市・城下町エリア</div>
+                    <h3 class="spot-title">ペットカフェ アルプス</h3>
+                    <p class="spot-desc">松本城を眺めながらペットと寛げるテラス席が人気。信州食材を使った料理も絶品です。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>小型犬OK</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>☕</span>
+                            <span>テラス席</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-trail.jpg" alt="トレイル">
+                    <div class="spot-tag">自然体験</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 軽井沢町・高原エリア</div>
+                    <h3 class="spot-title">軽井沢 ペットトレイルコース</h3>
+                    <p class="spot-desc">ペット同伴OKの森林トレイル。四季折々の自然を愛犬と一緒に満喫できます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>リード必須</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🌲</span>
+                            <span>無料</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="categories" class="categories">
+        <div class="section-header">
+            <div class="section-tag">CATEGORIES</div>
+            <h2 class="section-title">カテゴリーから探す</h2>
+        </div>
+
+        <div class="category-tabs">
+            <div class="category-tab active">すべて</div>
+            <div class="category-tab">ドッグラン</div>
+            <div class="category-tab">ペットカフェ</div>
+            <div class="category-tab">宿泊施設</div>
+            <div class="category-tab">自然体験</div>
+            <div class="category-tab">温泉</div>
+            <div class="category-tab">ショッピング</div>
+        </div>
+
+        <div class="spots-grid">
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-dogrun.jpg" alt="ドッグラン">
+                    <div class="spot-tag">ドッグラン</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 上田市・菅平高原エリア</div>
+                    <h3 class="spot-title">菅平高原 わんわんパーク</h3>
+                    <p class="spot-desc">標高1,300mの爽やかな高原で、広々としたドッグランを満喫できます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>全犬種OK</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🅿️</span>
+                            <span>駐車場あり</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-hotel.jpg" alt="ペットホテル">
+                    <div class="spot-tag">宿泊施設</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 安曇野市・穂高エリア</div>
+                    <h3 class="spot-title">ペットリゾート 北アルプス</h3>
+                    <p class="spot-desc">北アルプスを望む絶景のペット専用リゾートホテル。温泉も楽しめます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>大型犬OK</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>♨️</span>
+                            <span>温泉あり</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-shopping.jpg" alt="ショッピング">
+                    <div class="spot-tag">ショッピング</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 長野市・善光寺エリア</div>
+                    <h3 class="spot-title">ペットグッズ専門店 信州わんわん堂</h3>
+                    <p class="spot-desc">地元の職人が作る信州産ペットグッズや、こだわりのフード・おやつが揃います。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🛍️</span>
+                            <span>試食可</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>ペット同伴OK</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-nature.jpg" alt="自然体験">
+                    <div class="spot-tag">自然体験</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 大町市・青木湖エリア</div>
+                    <h3 class="spot-title">青木湖 ペットカヌー体験</h3>
+                    <p class="spot-desc">愛犬と一緒にカヌーで湖上散歩。透明度の高い青木湖の絶景を楽しめます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>小中型犬</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>📅</span>
+                            <span>要予約</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-onsen.jpg" alt="温泉">
+                    <div class="spot-tag">温泉</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 山ノ内町・湯田中温泉エリア</div>
+                    <h3 class="spot-title">ペットと泊まれる温泉宿 山の湯</h3>
+                    <p class="spot-desc">ペット専用の温泉風呂完備。飼い主様も源泉かけ流しの温泉でくつろげます。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>♨️</span>
+                            <span>ペット湯あり</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🐕</span>
+                            <span>全犬種OK</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="spot-card">
+                <div class="spot-image">
+                    <img src="/media/images/spot-cafe2.jpg" alt="カフェ">
+                    <div class="spot-tag">ペットカフェ</div>
+                </div>
+                <div class="spot-content">
+                    <div class="spot-location">📍 諏訪市・諏訪湖エリア</div>
+                    <h3 class="spot-title">レイクサイドカフェ わんこ</h3>
+                    <p class="spot-desc">諏訪湖を一望できるテラス席で、愛犬と優雅なティータイムを。</p>
+                    <div class="spot-meta">
+                        <div class="spot-meta-item">
+                            <span>☕</span>
+                            <span>テラス席</span>
+                        </div>
+                        <div class="spot-meta-item">
+                            <span>🍰</span>
+                            <span>犬用メニュー</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="more-btn-wrapper">
+            <a href="#" class="more-btn">
+                もっと見る
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15l5-5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="articles" class="articles">
+        <div class="section-header">
+            <div class="section-tag">PET TRAVEL GUIDE</div>
+            <h2 class="section-title">お出かけ情報</h2>
+            <p class="section-desc">ペットとのお出かけに役立つ情報をお届けします</p>
+        </div>
+
+        <div class="articles-grid">
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/article-car.jpg" alt="車でのお出かけ">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">お出かけ知識</span>
+                    <h3 class="article-title">愛犬と車でお出かけする時の注意点</h3>
+                    <p class="article-excerpt">長距離ドライブでも愛犬が快適に過ごせるコツや、準備しておきたいグッズをご紹介します。</p>
+                    <div class="article-meta">
+                        <span>2024.11.10</span>
+                        <span>5分で読めます</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/article-season.jpg" alt="季節のお出かけ">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">お出かけ知識</span>
+                    <h3 class="article-title">冬のペットお出かけ対策ガイド</h3>
+                    <p class="article-excerpt">寒い季節でも安心してお出かけできる、防寒対策や健康管理のポイントを解説します。</p>
+                    <div class="article-meta">
+                        <span>2024.11.05</span>
+                        <span>6分で読めます</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/article-manners.jpg" alt="マナー">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">お出かけ知識</span>
+                    <h3 class="article-title">公共施設でのペットマナー完全ガイド</h3>
+                    <p class="article-excerpt">他の利用者に配慮した、基本的なマナーやルールを分かりやすくまとめました。</p>
+                    <div class="article-meta">
+                        <span>2024.10.28</span>
+                        <span>4分で読めます</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/spot-feature.jpg" alt="特集">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">スポット紹介</span>
+                    <h3 class="article-title">絶景と愛犬を楽しむ！信州の紅葉スポット5選</h3>
+                    <p class="article-excerpt">ペット同伴OKの紅葉名所をピックアップ。秋の信州を愛犬と一緒に満喫しましょう。</p>
+                    <div class="article-meta">
+                        <span>2024.10.20</span>
+                        <span>7分で読めます</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/article-food.jpg" alt="グルメ">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">スポット紹介</span>
+                    <h3 class="article-title">ペット同伴OKの信州グルメスポット10選</h3>
+                    <p class="article-excerpt">愛犬・愛猫と一緒に楽しめる、長野県のおすすめレストラン＆カフェをご紹介。</p>
+                    <div class="article-meta">
+                        <span>2024.10.15</span>
+                        <span>8分で読めます</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="article-card">
+                <div class="article-image">
+                    <img src="/media/images/article-event.jpg" alt="イベント">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">スポット紹介</span>
+                    <h3 class="article-title">2024年冬・ペットと楽しめるイベント情報</h3>
+                    <p class="article-excerpt">長野県内で開催される、ペット同伴可能なイベントやマーケットの最新情報をお届け。</p>
+                    <div class="article-meta">
+                        <span>2024.11.12</span>
+                        <span>5分で読めます</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="more-btn-wrapper">
+            <a href="#" class="more-btn">
+                もっと見る
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15l5-5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <div class="cta">
+        <h2>もっと信州を楽しもう</h2>
+        <p>新着スポット情報やお得なキャンペーンをお届けします</p>
+        <a href="#" class="cta-btn">メールマガジン登録</a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>わんダフル信州について</h4>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+                    長野県のペットツーリズムを応援する、公式観光情報メディアです。
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>コンテンツ</h4>
+                <ul class="footer-links">
+                    <li><a href="#">スポット検索</a></li>
+                    <li><a href="#">お出かけ情報</a></li>
+                    <li><a href="#">エリアガイド</a></li>
+                    <li><a href="#">特集記事</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>サポート</h4>
+                <ul class="footer-links">
+                    <li><a href="#">よくある質問</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">利用規約</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>運営</h4>
+                <ul class="footer-links">
+                    <li><a href="#">長野県観光機構</a></li>
+                    <li><a href="#">掲載希望の事業者様へ</a></li>
+                    <li><a href="#">広告掲載について</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 WanDerful Shinshu - Nagano Prefecture Tourism Organization. All rights reserved.
+        </div>
+    </footer>
+
+    <Fragment slot="scripts">
+        <script is:inline>
+            // Hamburger menu
+            const hamburger = document.getElementById('hamburgerBtn');
+            hamburger?.addEventListener('click', () => {
+                // Mobile menu logic here
+            });
+
+            // Category tabs
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    categoryTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                });
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        </script>
+    </Fragment>
+</BaseLayout>
+
+

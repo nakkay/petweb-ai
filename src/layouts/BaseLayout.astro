@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  ogUrl?: string;
+}
+
+const { 
+  title, 
+  description = "Petweb.ai - ペット業界専門のWeb制作サービス。自分で更新が可能なプロ品質のWebサイトを相場の約半額で提供します。", 
+  ogImage = "/images/ogp.png",
+  ogUrl = "https://petweb-ai.overrrr.com"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content={description}>
+    <meta name="keywords" content="ペット,Web制作,ホームページ制作,ペットサロン,動物病院,AI,格安,更新可能,CMS">
+    <meta name="author" content="OVER株式会社">
+    
+    <!-- OGP / SNS -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:url" content={ogUrl}>
+    <meta property="og:site_name" content="Petweb.ai">
+    <meta property="og:image" content={ogImage}>
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={ogImage}>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    
+    <title>{title}</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <slot name="head" />
+</head>
+<body>
+    <slot />
+    
+    <slot name="scripts" />
+</body>
+</html>
+
+

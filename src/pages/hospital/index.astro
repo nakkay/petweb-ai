@@ -1,0 +1,625 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/hospital.css';
+---
+
+<BaseLayout 
+    title="どうぶつ総合病院 | Evidence-Based Veterinary Medicine"
+    description="どうぶつ総合病院 - エビデンスに基づく動物医療を提供。専門医による高度な診療と最新設備で、大切な家族の健康を守ります。"
+>
+    <div class="emergency-banner">
+        24時間救急対応 <a href="tel:0312345678">TEL 03-1234-5678</a>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo en">
+                Doubutsu Hospital
+            </div>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">診療案内</a>
+                <a href="#philosophy" class="nav-link">診療方針</a>
+                <a href="#facilities" class="nav-link">院内設備</a>
+                <a href="#hours" class="nav-link">診療時間</a>
+                <a href="#access" class="nav-link">アクセス</a>
+                <a href="tel:0312345678" class="reserve-btn">
+                    お問い合わせ
+                </a>
+            </div>
+            <div class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services">診療案内</a>
+            <a href="#philosophy">診療方針</a>
+            <a href="#facilities">院内設備</a>
+            <a href="#hours">診療時間</a>
+            <a href="#access">アクセス</a>
+            <a href="tel:0312345678">お問い合わせ</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg-slider">
+            <div class="hero-slide active">
+                <img src="/hospital/images/hospital-hero1.jpg" alt="診療風景">
+            </div>
+            <div class="hero-slide">
+                <img src="/hospital/images/hospital-hero2.jpg" alt="医療設備">
+            </div>
+            <div class="hero-slide">
+                <img src="/hospital/images/hospital-hero3.jpg" alt="院内環境">
+            </div>
+        </div>
+        <p class="hero-tagline en">
+            Evidence-Based Veterinary Medicine
+        </p>
+        <h1>
+            どうぶつ総合病院
+        </h1>
+        <div class="hero-location-wrapper">
+            <div class="hero-location">
+                東京メトロ明治神宮前駅から徒歩5分
+            </div>
+        </div>
+        <p class="hero-lead">
+            渋谷区神宮前で20年。専門医による高度な診療と最新設備により、<br>
+            エビデンスに基づく動物医療を提供いたします。<br>
+            一般診療から専門治療、24時間救急対応まで対応可能です。
+        </p>
+        <div class="hero-buttons">
+            <a href="tel:0312345678" class="btn-primary en">
+                <span>03-1234-5678</span>
+            </a>
+            <a href="#access" class="btn-secondary">
+                アクセス・診療時間
+            </a>
+        </div>
+    </section>
+
+    <section id="philosophy" class="philosophy">
+        <div class="philosophy-content">
+            <div class="philosophy-header">
+                <div class="section-label en">Our Philosophy</div>
+                <h2 class="section-title">診療方針</h2>
+                <p class="section-subtitle">科学的根拠に基づく診療と、飼い主様との信頼関係を基盤とした動物医療を実践しております</p>
+            </div>
+            
+            <div class="philosophy-points">
+                <div class="philosophy-point">
+                    <div class="philosophy-point-number en">01</div>
+                    <h4>精密な診察</h4>
+                    <p>最新の医療機器による検査と、獣医学的知見に基づく診断により、疾患の早期発見と適切な治療方針の決定を行います</p>
+                </div>
+                <div class="philosophy-point">
+                    <div class="philosophy-point-number en">02</div>
+                    <h4>明確な説明</h4>
+                    <p>診断結果、治療計画、予後について、医学的根拠を示しながら分かりやすくご説明いたします</p>
+                </div>
+                <div class="philosophy-point">
+                    <div class="philosophy-point-number en">03</div>
+                    <h4>インフォームドコンセント</h4>
+                    <p>飼い主様の十分な理解と同意のもと、最適な治療方針を共に決定してまいります</p>
+                </div>
+            </div>
+
+            <div class="philosophy-main">
+                <div class="philosophy-text">
+                    <p>
+                        当院は、獣医学の最新知見と臨床経験に基づく診療を提供しております。<br><br>
+                        
+                        動物の生理学的特性を正確に把握し、症状の背景にある病態を科学的に分析することで、
+                        効果的な治療を実現します。また、飼い主様に対しては、診断の根拠、治療の選択肢、
+                        予想される経過について、医学的事実に基づく情報を提供いたします。<br><br>
+                        
+                        予防医療から高度医療まで、地域の中核病院として、大切な家族の健康管理を継続的にサポートいたします。
+                    </p>
+                </div>
+                <div class="philosophy-image">
+                    <img src="/hospital/images/director-message.jpg" alt="院長">
+                </div>
+            </div>
+
+            <div class="philosophy-cta">
+                <a href="#" class="btn-white">診療方針の詳細</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news">
+        <div class="section-label en">News & Information</div>
+        <h2 class="section-title">お知らせ</h2>
+        <p class="section-subtitle">診療に関する重要なお知らせと、疾病予防に関する情報をお伝えしております</p>
+        
+        <div class="news-list">
+            <div class="news-item">
+                <div class="news-date en">2024.11.10</div>
+                <span class="news-category">重要</span>
+                <div class="news-title">年末年始の診療時間に関するご案内</div>
+            </div>
+            <div class="news-item">
+                <div class="news-date en">2024.11.05</div>
+                <span class="news-category">診療</span>
+                <div class="news-title">狂犬病予防接種の実施について</div>
+            </div>
+            <div class="news-item">
+                <div class="news-date en">2024.10.28</div>
+                <span class="news-category">イベント</span>
+                <div class="news-title">健康相談会の開催について（11月15日実施）</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities" class="facilities">
+        <div class="section-label en">Medical Facilities</div>
+        <h2 class="section-title">院内設備</h2>
+        <p class="section-subtitle">最新の医療機器を導入し、高度な診断と治療を可能にする環境を整備しております</p>
+        
+        <div class="facilities-slider">
+            <div class="facilities-main">
+                <div class="facility-slide active">
+                    <img src="/hospital/images/hospital-exterior.jpg" alt="病院外観">
+                    <div class="facility-info">
+                        <div class="facility-title">病院外観</div>
+                        <div class="facility-desc">駅から徒歩5分の立地。駐車場完備によりアクセス良好</div>
+                    </div>
+                </div>
+                <div class="facility-slide">
+                    <img src="/hospital/images/hospital-reception.jpg" alt="受付">
+                    <div class="facility-info">
+                        <div class="facility-title">受付・待合室</div>
+                        <div class="facility-desc">衛生管理を徹底した待合空間</div>
+                    </div>
+                </div>
+                <div class="facility-slide">
+                    <img src="/hospital/images/hospital-examination.jpg" alt="診察室">
+                    <div class="facility-info">
+                        <div class="facility-title">診察室</div>
+                        <div class="facility-desc">十分な広さを確保した診察空間で精密な診察を実施</div>
+                    </div>
+                </div>
+                <div class="facility-slide">
+                    <img src="/hospital/images/hospital-surgery.jpg" alt="手術室">
+                    <div class="facility-info">
+                        <div class="facility-title">手術室</div>
+                        <div class="facility-desc">クリーンルーム仕様の手術室で安全な外科手術を実施</div>
+                    </div>
+                </div>
+                <div class="facility-slide">
+                    <img src="/hospital/images/hospital-equipment.jpg" alt="医療設備">
+                    <div class="facility-info">
+                        <div class="facility-title">医療設備</div>
+                        <div class="facility-desc">デジタルレントゲン、超音波診断装置等の高度医療機器を完備</div>
+                    </div>
+                </div>
+                <div class="facility-slide">
+                    <img src="/hospital/images/hospital-ward.jpg" alt="入院室">
+                    <div class="facility-info">
+                        <div class="facility-title">入院室</div>
+                        <div class="facility-desc">24時間監視体制による入院管理</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-btn" id="facilityPrevBtn">‹</button>
+                <button class="slider-btn" id="facilityNextBtn">›</button>
+            </div>
+            
+            <div class="slider-dots" id="facilityDots"></div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="section-label en">Medical Services</div>
+        <h2 class="section-title">診療案内</h2>
+        <p class="section-subtitle">一般診療から専門的治療まで、包括的な動物医療サービスを提供しております</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-number en">01</div>
+                <h3>一般診療</h3>
+                <p>内科、外科、皮膚科、眼科等の基礎的診療から、慢性疾患の管理まで対応いたします。定期的な健康診断により疾患の早期発見に努めております。</p>
+                <ul class="service-details">
+                    <li>内科・外科診療</li>
+                    <li>健康診断・予防接種</li>
+                    <li>皮膚科・眼科診療</li>
+                    <li>歯科診療・口腔ケア</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-number en">02</div>
+                <h3>外科手術</h3>
+                <p>避妊・去勢手術から腫瘍摘出等の高度手術まで、麻酔管理を含めた安全な外科処置を実施いたします。</p>
+                <ul class="service-details">
+                    <li>避妊・去勢手術</li>
+                    <li>軟部組織外科</li>
+                    <li>整形外科手術</li>
+                    <li>救急外科処置</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-number en">03</div>
+                <h3>予防医療</h3>
+                <p>感染症予防、寄生虫予防等のプログラムにより、疾病の発生を未然に防ぎます。定期的な予防処置を推奨しております。</p>
+                <ul class="service-details">
+                    <li>各種ワクチン接種</li>
+                    <li>フィラリア予防</li>
+                    <li>ノミ・ダニ駆除</li>
+                    <li>定期健康診断</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-number en">04</div>
+                <h3>救急医療</h3>
+                <p>24時間体制で救急症例に対応いたします。緊急時は事前にご連絡ください。集中治療設備を完備しております。</p>
+                <ul class="service-details">
+                    <li>24時間救急対応</li>
+                    <li>夜間・休日診療</li>
+                    <li>救急外科手術</li>
+                    <li>集中治療管理</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="staff" class="staff">
+        <div class="section-label en">Medical Staff</div>
+        <h2 class="section-title">スタッフ紹介</h2>
+        <p class="section-subtitle">専門的な知識と豊富な臨床経験を持つ獣医師が診療を担当いたします</p>
+        
+        <div class="staff-grid">
+            <div class="staff-card">
+                <div class="staff-image">
+                    <img src="/hospital/images/staff-director.jpg" alt="院長">
+                </div>
+                <div class="staff-info">
+                    <div class="staff-role en">Director</div>
+                    <div class="staff-name">田中 太郎</div>
+                    <div class="staff-bio">
+                        獣医師歴20年。大学附属動物医療センターでの勤務を経て開業。内科、外科全般を担当。日本獣医師会認定医。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="staff-card">
+                <div class="staff-image">
+                    <img src="/hospital/images/staff-doctor1.jpg" alt="獣医師">
+                </div>
+                <div class="staff-info">
+                    <div class="staff-role en">Veterinarian</div>
+                    <div class="staff-name">佐藤 花子</div>
+                    <div class="staff-bio">
+                        皮膚科、眼科を専門とする。アレルギー性疾患や慢性皮膚疾患の診療に従事。獣医皮膚科学会所属。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="staff-card">
+                <div class="staff-image">
+                    <img src="/hospital/images/staff-nurse.jpg" alt="動物看護師">
+                </div>
+                <div class="staff-info">
+                    <div class="staff-role en">Veterinary Nurse</div>
+                    <div class="staff-name">鈴木 美咲</div>
+                    <div class="staff-bio">
+                        認定動物看護師資格保有。診療補助、入院管理、術後ケア等を担当。動物看護師統一認定機構認定。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hours" class="hours">
+        <div class="section-label en">Business Hours</div>
+        <h2 class="section-title">診療時間</h2>
+        <p class="section-subtitle">予約制により待ち時間を短縮しております。救急症例は24時間対応可能です</p>
+        
+        <div class="hours-container">
+            <div class="hours-table">
+                <div class="hours-row header">
+                    <div class="en">Day</div>
+                    <div class="en">Morning</div>
+                    <div class="en">Afternoon</div>
+                </div>
+                <div class="hours-row">
+                    <div class="hours-day">月曜日</div>
+                    <div class="hours-time en">9:00 - 12:00</div>
+                    <div class="hours-time en">16:00 - 19:00</div>
+                </div>
+                <div class="hours-row">
+                    <div class="hours-day">火曜日</div>
+                    <div class="hours-time en">9:00 - 12:00</div>
+                    <div class="hours-time en">16:00 - 19:00</div>
+                </div>
+                <div class="hours-row">
+                    <div class="hours-day">水曜日</div>
+                    <div class="hours-time en">9:00 - 12:00</div>
+                    <div class="hours-time en">16:00 - 19:00</div>
+                </div>
+                <div class="hours-row">
+                    <div class="hours-day">木曜日</div>
+                    <div class="hours-closed">休診</div>
+                    <div class="hours-closed">休診</div>
+                </div>
+                <div class="hours-row">
+                    <div class="hours-day">金曜日</div>
+                    <div class="hours-time en">9:00 - 12:00</div>
+                    <div class="hours-time en">16:00 - 19:00</div>
+                </div>
+                <div class="hours-row">
+                    <div class="hours-day">土曜日</div>
+                    <div class="hours-time en">9:00 - 12:00</div>
+                    <div class="hours-time en">14:00 - 17:00</div>
+                </div>
+                <div class="hours-row">
+                    <div class="hours-day">日・祝</div>
+                    <div class="hours-time en">9:00 - 12:00</div>
+                    <div class="hours-closed">休診</div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="hours-note">
+                    <h4>受診時の注意事項</h4>
+                    <ul>
+                        <li>予約制を導入しております（当日予約可）</li>
+                        <li>初診時は受付手続きのため、診療開始15分前までにご来院ください</li>
+                        <li>救急症例は事前にお電話にてご連絡ください</li>
+                        <li>混雑状況により待機時間が発生する場合がございます</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="access" class="access">
+        <div class="section-label en">Access</div>
+        <h2 class="section-title">アクセス</h2>
+        <p class="section-subtitle">明治神宮前駅から徒歩5分。駐車場完備により自家用車でのご来院も可能です</p>
+        
+        <div class="access-content">
+            <div class="access-info">
+                <h3>どうぶつ総合病院</h3>
+                
+                <div class="access-item">
+                    <div class="access-label en">Address</div>
+                    <div class="access-text">
+                        〒150-0001<br>
+                        東京都渋谷区神宮前1-2-3<br>
+                        メディカルビル1F
+                    </div>
+                </div>
+                
+                <div class="access-item">
+                    <div class="access-label en">Access</div>
+                    <div class="access-text">
+                        JR原宿駅より徒歩8分<br>
+                        東京メトロ明治神宮前駅より徒歩5分<br>
+                        駐車場3台完備（無料）
+                    </div>
+                </div>
+                
+                <div class="access-item">
+                    <div class="access-label en">Phone</div>
+                    <div class="access-text">
+                        <a href="tel:0312345678">03-1234-5678</a><br>
+                        救急時24時間対応
+                    </div>
+                </div>
+                
+                <div class="access-item">
+                    <div class="access-label en">Email</div>
+                    <div class="access-text">
+                        <a href="mailto:info@doubutsu-hospital.jp">info@doubutsu-hospital.jp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map">
+                <span class="en">Google Maps Integration</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="section-label en">Medical Information</div>
+        <h2 class="section-title">医療情報</h2>
+        <p class="section-subtitle">疾病予防と健康管理に関する医学的情報を定期的に発信しております</p>
+        
+        <div class="blog-list">
+            <a href="#" class="blog-card">
+                <div class="blog-image">
+                    <img src="/hospital/images/blog-health1.jpg" alt="冬季の健康管理">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="en">2024.11.08</span>
+                        <span class="blog-category">健康管理</span>
+                    </div>
+                    <h3 class="blog-title-card">冬季における犬の健康管理について</h3>
+                    <p class="blog-excerpt">低温環境下での体温調節機能の維持、特に小型犬種および高齢犬における留意点について解説いたします。適切な環境管理により、冬季特有の健康リスクを軽減することが可能です。</p>
+                </div>
+            </a>
+            <a href="#" class="blog-card">
+                <div class="blog-image">
+                    <img src="/hospital/images/blog-vaccine.jpg" alt="ワクチン接種">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="en">2024.11.01</span>
+                        <span class="blog-category">予防医療</span>
+                    </div>
+                    <h3 class="blog-title-card">ワクチン接種プログラムについて</h3>
+                    <p class="blog-excerpt">感染症予防のための適切なワクチン接種時期と種類について、獣医学的根拠に基づき解説いたします。混合ワクチンおよび狂犬病ワクチンの推奨接種スケジュールをご案内します。</p>
+                </div>
+            </a>
+            <a href="#" class="blog-card">
+                <div class="blog-image">
+                    <img src="/hospital/images/blog-dental.jpg" alt="歯科診療">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="en">2024.10.25</span>
+                        <span class="blog-category">歯科</span>
+                    </div>
+                    <h3 class="blog-title-card">口腔衛生管理の重要性</h3>
+                    <p class="blog-excerpt">歯周病が全身の健康状態に及ぼす影響について、医学的エビデンスを基に説明いたします。日常的な口腔ケアの方法と、専門的な歯科処置の必要性についてご案内します。</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3 class="en">Doubutsu Hospital</h3>
+                <p>
+                    エビデンスに基づく動物医療の提供を通じて、地域社会における動物の健康維持に貢献いたします。専門的な診療から日常的な健康管理まで、包括的な医療サービスを提供しております。
+                </p>
+                <div style="margin-top: 2rem; line-height: 2.2; font-size: 0.9rem;">
+                    〒150-0001　東京都渋谷区神宮前1-2-3メディカルビル1F<br>
+                    <span class="en">TEL</span> 03-1234-5678（24時間救急対応）
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>診療案内</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">診療内容</a></li>
+                    <li><a href="#philosophy">診療方針</a></li>
+                    <li><a href="#facilities">医療設備</a></li>
+                    <li><a href="#hours">診療時間</a></li>
+                    <li><a href="#access">アクセス</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>お問い合わせ</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:0312345678">電話での予約</a></li>
+                    <li><a href="mailto:info@doubutsu-hospital.jp">メールでの問い合わせ</a></li>
+                </ul>
+                <div style="margin-top: 2rem; opacity: 0.7; font-size: 0.9rem; line-height: 2;">
+                    <strong>診療時間</strong><br>
+                    午前 9:00〜12:00<br>
+                    午後 16:00〜19:00<br>
+                    休診日：木曜日
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="en">&copy; 2024 Doubutsu Hospital. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <Fragment slot="scripts">
+        <script is:inline>
+            // ハンバーガーメニュー
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburgerBtn.addEventListener('click', () => {
+                hamburgerBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // モバイルメニューのリンククリック時に閉じる
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburgerBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // ヒーロー背景カルーセル
+            let heroSlideIndex = 0;
+            const heroSlides = document.querySelectorAll('.hero-slide');
+
+            function showHeroSlide() {
+                heroSlides.forEach(slide => slide.classList.remove('active'));
+                heroSlideIndex = (heroSlideIndex + 1) % heroSlides.length;
+                heroSlides[heroSlideIndex].classList.add('active');
+            }
+
+            setInterval(showHeroSlide, 5000);
+
+            // スムーズスクロール
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // 院内設備カルーセル
+            let currentFacility = 0;
+            const facilitySlides = document.querySelectorAll('.facility-slide');
+            const totalFacilities = facilitySlides.length;
+
+            // ドットインジケーター生成
+            const dotsContainer = document.getElementById('facilityDots');
+            if (dotsContainer && totalFacilities > 0) {
+                for (let i = 0; i < totalFacilities; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+                    dot.onclick = () => goToFacility(i);
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function changeFacility(direction) {
+                if (facilitySlides.length === 0) return;
+                
+                facilitySlides[currentFacility].classList.remove('active');
+                
+                if (direction === 'next') {
+                    currentFacility = (currentFacility + 1) % totalFacilities;
+                } else {
+                    currentFacility = (currentFacility - 1 + totalFacilities) % totalFacilities;
+                }
+                
+                facilitySlides[currentFacility].classList.add('active');
+                updateDots();
+            }
+
+            function goToFacility(index) {
+                if (facilitySlides.length === 0) return;
+                
+                facilitySlides[currentFacility].classList.remove('active');
+                currentFacility = index;
+                facilitySlides[currentFacility].classList.add('active');
+                updateDots();
+            }
+
+            function updateDots() {
+                const dots = document.querySelectorAll('.slider-dot');
+                dots.forEach((dot, index) => {
+                    if (index === currentFacility) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+
+            // スライダーボタン
+            document.getElementById('facilityPrevBtn').addEventListener('click', () => changeFacility('prev'));
+            document.getElementById('facilityNextBtn').addEventListener('click', () => changeFacility('next'));
+
+            // 自動スライド
+            if (facilitySlides.length > 0) {
+                setInterval(() => changeFacility('next'), 6000);
+            }
+        </script>
+    </Fragment>
+</BaseLayout>
+
+

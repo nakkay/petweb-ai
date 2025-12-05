@@ -1,0 +1,682 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/main.css';
+---
+
+<BaseLayout 
+    title="Petweb.ai | ペット業界専門のWeb制作サービス"
+    description="Petweb.ai - ペット業界専門のWeb制作サービス。自分で更新が可能なプロ品質のWebサイトを相場の約半額で提供します。"
+>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/images/logo.png" alt="Petweb.ai">
+            </div>
+            <a href="#contact" class="nav-link">資料請求</a>
+        </nav>
+    </header>
+
+    <div class="hero-wrapper">
+        <section class="hero">
+            <div>
+                <div class="hero-tagline">
+                    <div class="hero-logo">
+                        <img src="/images/logo.png" alt="Petweb.ai">
+                    </div>
+                    <div class="hero-tag">専門性も、品質も、コストも。全部そろうWeb制作</div>
+                </div>
+                <h1>
+                    ペット事業のWeb制作。<br>
+                    <span class="accent">「高コストかつ更新困難」を</span><br>
+                    AIと業界知見で刷新する。
+                </h1>
+                <p class="hero-lead">
+                    月間1,000万PV、YouTube登録者150万人のペット専門メディア元責任者が、AIと共に制作。業界知見と最新技術で、<strong>相場の約半額を実現</strong>しました。自分で更新でき、集客とともに「育つWebサイト」をご提案します。
+                </p>
+                <div class="hero-cta-wrapper">
+                    <p class="cta-microcopy">⏱️ 所要時間：30秒 ｜ 💰 完全無料 ｜ 📞 営業電話なし</p>
+                    <a href="#contact" class="hero-cta">📄 サービス資料をダウンロード</a>
+                </div>
+            </div>
+            <div>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon">💰</span>
+                        <div class="meta-content">
+                            <span class="meta-value en">50万円</span>
+                            <span class="meta-label">相場の約半額 / 業界最安水準</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">⚡</span>
+                        <div class="meta-content">
+                            <span class="meta-value">最短1ヶ月</span>
+                            <span class="meta-label">スピード納品 / 通常の1/2の期間</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">✏️</span>
+                        <div class="meta-content">
+                            <span class="meta-value">更新自由</span>
+                            <span class="meta-label">自分で簡単に / 記事更新できる</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="test-sites">
+        <h2 class="section-title">🖥️ テストサイトを見る</h2>
+        <p class="section-lead">画一的な雛形に当てはめる制作ではありません。貴社のブランドイメージや業態に合わせて、デザインやページ構成は柔軟に最適化いたします。</p>
+        <div class="test-sites-grid">
+            <a href="#" class="test-site-card" data-popup-url="/salon/">
+                <div class="test-site-image">
+                    <img src="/images/test-salon.jpg" alt="ペットサロンサイトサンプル">
+                </div>
+                <div class="test-site-info">
+                    <div class="test-site-category">Pet Salon</div>
+                    <h3 class="test-site-title">🐾 ペットサロン</h3>
+                    <p class="test-site-desc">トリミング、シャンプー、爪切りなどのサービスを提供するサロンのサンプルサイト</p>
+                </div>
+            </a>
+            <a href="#" class="test-site-card" data-popup-url="/hospital/">
+                <div class="test-site-image">
+                    <img src="/images/test-hospital.jpg" alt="動物病院サイトサンプル">
+                </div>
+                <div class="test-site-info">
+                    <div class="test-site-category">Animal Hospital</div>
+                    <h3 class="test-site-title">🏥 動物病院</h3>
+                    <p class="test-site-desc">診療案内、予約システム、スタッフ紹介などを備えた動物病院のサンプルサイト</p>
+                </div>
+            </a>
+            <a href="#" class="test-site-card" data-popup-url="/media/">
+                <div class="test-site-image">
+                    <img src="/images/test-government.jpg" alt="メディアサイトサンプル">
+                </div>
+                <div class="test-site-info">
+                    <div class="test-site-category">Media</div>
+                    <h3 class="test-site-title">📰 ペットメディア</h3>
+                    <p class="test-site-desc">ペット関連情報を発信するメディアサイトのサンプル</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="problems">
+        <h2 class="section-title">😰 こんなお悩みはありませんか？</h2>
+        <div class="problems-list">
+            <div class="problem">
+                <p class="problem-main">💸 Webサイトは必要だが、100万円以上の投資には二の足を踏んでしまう</p>
+                <p class="problem-loss">予算の壁で制作を断念し、SNS頼みに。その結果、情報の蓄積ができず、信頼感の醸成や検索流入の機会を構造的に逃し続けていませんか？</p>
+            </div>
+            <div class="problem">
+                <p class="problem-main">😟 「安かろう悪かろう」は困る。ペット業界の文脈が通じない業者への疲弊</p>
+                <p class="problem-loss">価格だけで選んだ結果、ペット特有の専門用語や飼い主心理が伝わらない。制作・修正のたびに説明の手間がかかり、本来の業務時間を圧迫されることへの懸念はありませんか？</p>
+            </div>
+            <div class="problem">
+                <p class="problem-main">✏️ 「今」伝えたい情報を、即座に発信できないもどかしさ</p>
+                <p class="problem-loss">新サービスや急な営業時間変更など、ペット事業は「鮮度」が命。しかし、更新を業者に依存する体制ではタイムラグが発生し、もっとも熱量の高い集客タイミングを逸失してしまいます。</p>
+            </div>
+            <div class="problem">
+                <p class="problem-main">📸 施設の雰囲気を切り取った「資産」を、Web上で活かしきれていない</p>
+                <p class="problem-loss">ペットたちの可愛い姿や施設の魅力的な写真（資産）を持っているのに、Webデザインがその魅力を受け止めきれていない。その結果、本来伝わるはずの「安心感」や「癒し」がユーザーに届かず、予約や来店の決め手を欠いていませんか？</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="story">
+        <h2 class="section-title">💭 私たち自身が経験しました。「高額な制作費」という現実を。</h2>
+        <div class="story-container">
+            <div class="story-content">
+                <p>
+                    <span class="en">OVER</span>株式会社は、2023年にペット関連事業で創業しました。2024年、自社サイトのリニューアルを検討した際、複数の制作会社から受け取った見積もりは──
+                </p>
+                <span class="story-hl">わずか5ページで、100万円〜200万円。</span>
+                <p>
+                    デザイン費、コーディング費、ディレクション費...項目を見れば妥当なのかもしれません。しかし、率直に感じました。「中小のペット事業者には、到底手が届かない」
+                </p>
+                <p>
+                    だからこそ、決意しました。ペット業界で事業を展開する私たちだからこそ、最新の<span class="en">AI</span>技術を駆使し、同じ悩みを抱える事業者のためにプロ品質のサイトを、手の届く価格で提供しようと。それが、<span class="en">Petweb.ai</span>です。
+                </p>
+            </div>
+            <div class="story-image">
+                <img src="/images/story.jpg" alt="OVER株式会社の創業ストーリー">
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2 class="section-title">💡 なぜ、相場の約半額で提供できるのか？</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-content">
+                    <h3>⚡ AI技術で制作コストを大幅削減</h3>
+                    <p class="feature-desc">最新<span class="en">AI</span>技術を活用し、従来人手で行っていた作業を効率化します。</p>
+                    <ul>
+                        <li>☑️ コーディング工数を大幅削減</li>
+                        <li>☑️ 従来2〜3ヶ月かかる制作を、約1ヶ月で納品</li>
+                        <li>☑️ 効率化できる部分は徹底的に効率化</li>
+                    </ul>
+                </div>
+                <div class="feature-img">
+                    <img src="/images/feature-ai.jpg" alt="AI技術による制作">
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-content">
+                    <h3>✨ 品質は妥協しません</h3>
+                    <p class="feature-desc">月間1,000万<span class="en">PV</span>、<span class="en">YouTube</span>登録者150万人のペット専門メディア元責任者が全案件を監修します。</p>
+                    <ul>
+                        <li>☑️ ペットビジネス実践者の知見を活かした訴求設計</li>
+                        <li>☑️ 単なる制作ではなく、「成果」にコミットする視点</li>
+                        <li>☑️ デザインの最終判断は、必ず人間が行います</li>
+                    </ul>
+                </div>
+                <div class="feature-img">
+                    <img src="/images/feature-quality.jpg" alt="品質管理">
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-content">
+                    <h3>🐾 ペット業界専門だから、無駄がない</h3>
+                    <p class="feature-desc">業界特有のニーズを理解しているため、打ち合わせもスムーズに進みます。</p>
+                    <ul>
+                        <li>☑️ ペットサロンなら「初回割引」「ビフォーアフター」は必須</li>
+                        <li>☑️ 動物病院なら「安心感」「スタッフ紹介」が重要</li>
+                        <li>☑️ 不要な提案はせず、本当に必要な機能だけを実装</li>
+                    </ul>
+                </div>
+                <div class="feature-img">
+                    <img src="/images/feature-pet.jpg" alt="ペット業界専門性">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cms-section">
+        <h2 class="section-title">✏️ 更新も、自分でできる</h2>
+        <p class="section-lead">
+            お知らせやブログ記事を、誰でも簡単に更新できる仕組みを標準装備。<br>
+            制作会社に頼まず、今すぐ情報発信できます。
+        </p>
+
+        <div class="cms-demo">
+            <div class="cms-editor">
+                <div class="cms-caption">管理画面イメージ</div>
+                <div class="cms-screen">
+                    <div class="cms-header">
+                        <div class="cms-breadcrumb">
+                            <span>コンテンツ</span>
+                            <span class="cms-breadcrumb-sep">›</span>
+                            <span>お知らせ</span>
+                            <span class="cms-breadcrumb-sep">›</span>
+                            <span class="cms-breadcrumb-current">新規作成</span>
+                        </div>
+                    </div>
+                    <div class="cms-form">
+                        <div class="cms-field">
+                            <label>タイトル <span class="cms-required">*</span></label>
+                            <input type="text" value="新しいトリマーが入社しました" readonly>
+                        </div>
+                        <div class="cms-field">
+                            <label>カテゴリ <span class="cms-required">*</span></label>
+                            <div class="cms-select">
+                                <span>お知らせ</span>
+                                <span class="cms-select-arrow">▼</span>
+                            </div>
+                        </div>
+                        <div class="cms-field">
+                            <label>本文 <span class="cms-required">*</span></label>
+                            <div class="cms-textarea">
+                                <p>この度、新しいトリマーのスタッフが入社いたしました。</p>
+                                <p>トリミング経験10年以上のベテランで、特に小型犬のカットを得意としております。</p>
+                                <p class="cms-cursor">|</p>
+                            </div>
+                        </div>
+                        <div class="cms-field">
+                            <label>アイキャッチ画像</label>
+                            <div class="cms-image-field">
+                                <span class="cms-upload-text">📎 ファイルを選択</span>
+                                <span class="cms-upload-size">推奨: 1200×630px</span>
+                            </div>
+                        </div>
+                        <div class="cms-field">
+                            <label>公開日時</label>
+                            <div class="cms-datetime">
+                                <input type="text" value="2024-11-15 10:00" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cms-actions">
+                        <button class="cms-btn-draft">下書き保存</button>
+                        <button class="cms-btn-publish">公開する</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cms-benefits">
+                <div class="cms-benefit">
+                    <div class="cms-benefit-icon">⏱️</div>
+                    <h3>5分で記事公開</h3>
+                    <p>直感的な編集画面で、誰でもすぐに記事を作成できます</p>
+                </div>
+                <div class="cms-benefit">
+                    <div class="cms-benefit-icon">📱</div>
+                    <h3>スマホからもOK</h3>
+                    <p>外出先からでも、思いついたときに更新できます</p>
+                </div>
+                <div class="cms-benefit">
+                    <div class="cms-benefit-icon">💰</div>
+                    <h3>更新費用0円</h3>
+                    <p>何記事書いても追加料金なし。思う存分情報発信できます</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <h2 class="section-title">💰 明確な価格設定</h2>
+        
+        <div class="pricing-intro">
+            <p class="pricing-copy">複雑な見積もりは不要。ペット事業の集客に必要な機能を網羅した、明朗なワンプラン。</p>
+            <p class="pricing-description">制作費と維持費を明確化し、後から積み重なる「見えないコスト」の不安を払拭します。<br>プロによるディレクションから文章作成、そして運用のインフラまで。これ一つで、Web集客の基盤が整います。</p>
+        </div>
+
+        <div class="plan-card">
+            <div class="plan-header">
+                <h3 class="plan-label">Standard Plan</h3>
+                <p class="plan-type">制作・初期費用</p>
+            </div>
+            <div class="plan-price">
+                <span class="price-amount">500,000円</span>
+                <span class="price-tax">（税別）</span>
+            </div>
+            <p class="plan-note">ペット業界の現場を知るプロとAIの協働により、高品質とコストダウンを両立しました。</p>
+            <div class="plan-divider"></div>
+            <h4 class="plan-section-title">▼ この費用に含まれるもの（制作一式）</h4>
+            <ul class="plan-list">
+                <li><strong>Webサイト制作（5ページ構成）</strong>：トップページ＋主要4ページ</li>
+                <li><strong>レスポンシブデザイン</strong>：スマホ・タブレット完全対応</li>
+                <li><strong>企画・構成</strong>：初回ヒアリングに基づくディレクション</li>
+                <li><strong>プロによるライティング</strong>：全ページのキャッチコピー・文章作成</li>
+                <li><strong>自社更新システム導入</strong>：microCMS実装（お知らせ・ブログ等）</li>
+                <li><strong>基本機能実装</strong>：お問い合わせフォーム / Google Map埋め込み / 基本SEO設定</li>
+            </ul>
+        </div>
+
+        <div class="plan-card">
+            <div class="plan-header">
+                <h3 class="plan-label">Monthly Support</h3>
+                <p class="plan-type">月額保守・運用サポート</p>
+            </div>
+            <div class="plan-price">
+                <span class="price-amount">15,000円</span>
+                <span class="price-period">/月</span>
+                <span class="price-tax">（税別・12ヶ月契約）</span>
+            </div>
+            <p class="plan-note">サーバー代もシステム利用料もすべて込み。窓口を一本化し、運用の手間を最小限にします。</p>
+            <div class="plan-divider"></div>
+            <h4 class="plan-section-title">▼ この費用に含まれるもの（安心のインフラ）</h4>
+            <ul class="plan-list">
+                <li><strong>インフラ費用一式</strong>：サーバー費用 / CMS利用料（実費請求なし）</li>
+                <li><strong>安全管理</strong>：セキュリティアップデート対応</li>
+                <li><strong>パートナーサポート</strong>：技術的な相談窓口・サポート</li>
+                <li><strong>軽微な修正対応</strong>：月1〜2回程度（テキスト変更や画像差し替えなど）</li>
+            </ul>
+        </div>
+
+        <div class="options-section">
+            <h3 class="options-title">🔧 拡張オプション</h3>
+            <p class="options-intro">事業の成長や課題に合わせて、必要な機能を追加可能です。</p>
+            
+            <div class="options-grid">
+                <div class="option-category">
+                    <h4>機能拡張</h4>
+                    <div class="option-item">
+                        <span class="option-name">予約システム連携</span>
+                        <span class="option-price">10万円〜</span>
+                    </div>
+                    <div class="option-item">
+                        <span class="option-name">ページ追加</span>
+                        <span class="option-price">3万円〜 / 1ページ</span>
+                    </div>
+                </div>
+                
+                <div class="option-category">
+                    <h4>コンテンツ</h4>
+                    <div class="option-item">
+                        <span class="option-name">プロカメラマン撮影</span>
+                        <span class="option-price">15万円〜</span>
+                    </div>
+                    <div class="option-item">
+                        <span class="option-name">記事制作</span>
+                        <span class="option-price">5万円〜</span>
+                    </div>
+                </div>
+                
+                <div class="option-category">
+                    <h4>運用代行</h4>
+                    <div class="option-item">
+                        <span class="option-name">記事更新代行</span>
+                        <span class="option-price">3,000円〜 / 1記事</span>
+                    </div>
+                </div>
+                
+                <div class="option-category">
+                    <h4>その他</h4>
+                    <div class="option-item">
+                        <span class="option-name">EC構築（Shopify）</span>
+                        <span class="option-price">お見積もり</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ownership-note">
+            <h4>💡 将来的な「自社保有」も可能です</h4>
+            <p>契約から12ヶ月経過後は、<strong>100,000円（税別）</strong>にてサイトデータの完全譲渡も承ります。<br>「ずっと払い続けなければならない」というSaaS型サービスの縛りを排除し、事業者の資産形成を支援します。</p>
+        </div>
+        
+        <div class="price-cta">
+            <p class="cta-microcopy">⏱️ 所要時間：30秒 ｜ 💰 完全無料 ｜ 📞 営業電話なし</p>
+            <a href="#contact">📄 サービス資料をダウンロード</a>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <h2 class="section-title">📋 納品までの流れ</h2>
+        <div class="process-list">
+            <div class="process-item">
+                <div class="process-num en">01</div>
+                <div class="process-info">
+                    <h4>お問い合わせ・資料請求</h4>
+                    <p>まずは資料をダウンロードしてご検討ください。</p>
+                </div>
+            </div>
+            <div class="process-item">
+                <div class="process-num en">02</div>
+                <div class="process-info">
+                    <h4>ヒアリング</h4>
+                    <p>貴社の強み、ターゲット、競合などを詳しくお伺いします（オンライン対応可）。</p>
+                </div>
+            </div>
+            <div class="process-item">
+                <div class="process-num en">03</div>
+                <div class="process-info">
+                    <h4>サイト構成のご提案</h4>
+                    <p>ペット業界の知見を活かした構成案をご提示します。</p>
+                </div>
+            </div>
+            <div class="process-item">
+                <div class="process-num en">04</div>
+                <div class="process-info">
+                    <h4>制作開始</h4>
+                    <p><span class="en">AI</span>技術とプロの監修により、制作を進めます。</p>
+                </div>
+            </div>
+            <div class="process-item">
+                <div class="process-num en">05</div>
+                <div class="process-info">
+                    <h4>確認・修正</h4>
+                    <p>修正は2回まで無料で対応いたします。</p>
+                </div>
+            </div>
+            <div class="process-item">
+                <div class="process-num en">06</div>
+                <div class="process-info">
+                    <h4>納品・公開</h4>
+                    <p><span class="en">Vercel</span>環境にデプロイし、公開します。</p>
+                </div>
+            </div>
+            <div class="process-item">
+                <div class="process-num en">07</div>
+                <div class="process-info">
+                    <h4>保守開始</h4>
+                    <p>月額1.5万円の保守プランで、安心の運用サポートが始まります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2 class="section-title">❓ よくあるご質問</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>本当に<span class="en">AI</span>だけで制作するのですか？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">
+                    いいえ。<span class="en">AI</span>は作業効率化のツールとして活用しますが、デザインの判断、訴求設計、最終チェックは必ず人間が行います。月間1,000万<span class="en">PV</span>のペット専門メディアを運営していた経験を持つディレクターが、すべての案件を監修いたします。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>なぜそんなに安く提供できるのですか？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">
+                    <span class="en">AI</span>技術を活用してコーディング工数を大幅に削減しているためです。また、ペット業界に特化することで、業界特有のニーズを熟知しており、無駄な提案や修正が発生しません。効率化できる部分は徹底的に効率化し、その分を価格に還元しています。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span><span class="en">WordPress</span>ではないのですか？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">
+                    基本的には静的サイト（<span class="en">HTML/CSS/JavaScript</span>）+ <span class="en">microCMS</span>という構成を採用しています。<span class="en">WordPress</span>より表示速度が速く、セキュリティリスクも低く抑えられます。お知らせやブログの更新は、<span class="en">microCMS</span>の管理画面から簡単に行えます。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>自分で更新できますか？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">
+                    はい、可能です。<span class="en">microCMS</span>という管理画面から、お知らせやブログの投稿・編集が簡単にできます。操作方法のマニュアルもご用意しており、サポートも行いますのでご安心ください。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>保守プランは必須ですか？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">
+                    いいえ、必須ではございません。初期費用のみでサイトを納品することも可能です。ただし、保守プラン（月額1.5万円〜）にご加入いただくと、定期的なセキュリティアップデート、技術サポート、軽微な修正対応などが含まれ、安心してサイトを運用いただけます。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>納期はどのくらいですか？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">
+                    標準的な5ページ構成のサイトで、約1ヶ月での納品となります。従来は2〜3ヶ月かかるところを、<span class="en">AI</span>技術の活用により大幅に短縮しております。お急ぎの場合はご相談ください。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>ペット業界以外でも対応できますか？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">
+                    申し訳ございません。現在はペット関連企業様専門とさせていただいております。ペット業界に特化することで、業界特有のニーズを深く理解し、高品質なサイトを低価格で提供できています。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>撮影もお願いできますか？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">
+                    はい、オプションで対応可能です（15万円〜）。ペット撮影の経験豊富なプロカメラマンと連携し、サイトに映える魅力的な写真撮影を行います。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">📩 まずは、資料をダウンロードしてください。</h2>
+        <p class="contact-lead">
+            <span class="en">Petweb.ai</span>のサービス詳細、制作事例、価格表など全8ページの資料をご用意しています。
+        </p>
+        <div class="form">
+            <form id="contactForm">
+                <div class="form-field">
+                    <label>メールアドレス <span style="color: #c97854;">*</span></label>
+                    <input type="email" name="email" required placeholder="例：yamada@example.com">
+                </div>
+                <div class="form-field">
+                    <label>会社名 <span style="color: #c97854;">*</span></label>
+                    <input type="text" name="company" required placeholder="例：株式会社ペットサロン">
+                </div>
+                <div class="form-field">
+                    <label>ご担当者名 <span style="color: #c97854;">*</span></label>
+                    <input type="text" name="name" required placeholder="例：山田 太郎">
+                </div>
+                <div class="form-field">
+                    <label>業種 <span style="color: #c97854;">*</span></label>
+                    <select name="business" required>
+                        <option value="">選択してください</option>
+                        <option value="salon">ペットサロン</option>
+                        <option value="hospital">動物病院</option>
+                        <option value="hotel">ペットホテル</option>
+                        <option value="shop">ペットショップ</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+                <div class="form-note">
+                    <p>ご入力いただいたメールアドレスに、資料ダウンロードリンクを即座にお送りします</p>
+                    <p>⏱️ 所要時間：30秒 ｜ 💰 完全無料 ｜ 📞 営業電話なし</p>
+                </div>
+                <button type="submit" class="form-submit">📥 無料で資料をダウンロード</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 <span class="en">OVER</span>株式会社 | <span class="en">Petweb.ai</span></p>
+    </footer>
+
+    <!-- Popup Modal -->
+    <div id="popupModal" class="popup-modal">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2 id="popupTitle" class="popup-title">テストサイト</h2>
+                <button class="popup-close" id="closePopup">&times;</button>
+            </div>
+            <iframe id="popupIframe" class="popup-iframe"></iframe>
+        </div>
+    </div>
+
+    <Fragment slot="scripts">
+        <script is:inline>
+            // Popup Modal
+            const popupModal = document.getElementById('popupModal');
+            const popupIframe = document.getElementById('popupIframe');
+            const popupTitle = document.getElementById('popupTitle');
+            const closePopup = document.getElementById('closePopup');
+            const testSiteCards = document.querySelectorAll('.test-site-card[data-popup-url]');
+
+            testSiteCards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const url = card.getAttribute('data-popup-url');
+                    const title = card.querySelector('.test-site-title').textContent;
+                    
+                    popupTitle.textContent = title;
+                    popupIframe.src = url;
+                    popupModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            function closeModal() {
+                popupModal.classList.remove('active');
+                popupIframe.src = '';
+                document.body.style.overflow = '';
+            }
+
+            closePopup.addEventListener('click', closeModal);
+
+            popupModal.addEventListener('click', (e) => {
+                if (e.target === popupModal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && popupModal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            // FAQ accordion
+            document.querySelectorAll('.faq-q').forEach(q => {
+                q.addEventListener('click', () => {
+                    const item = q.parentElement;
+                    const isActive = item.classList.contains('active');
+                    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                    if (!isActive) item.classList.add('active');
+                });
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(a => {
+                a.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    }
+                });
+            });
+
+            // Form submission
+            document.getElementById('contactForm').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+                
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.disabled = true;
+                submitBtn.textContent = '送信中...';
+                submitBtn.style.opacity = '0.6';
+                
+                try {
+                    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzazcIE5N_kIvoW2oiYbsEA9m2QME-hodk0ebrrYKMXLQobJWrHIfZlYfn4MGqkxzT2/exec';
+                    
+                    const response = await fetch(SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                    
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                    
+                    alert('お問い合わせいただき、ありがとうございます。\n\nご入力いただいたメールアドレス宛に、自動返信メールをお送りいたしました。\n担当者より2営業日以内にご連絡させていただきます。\n\n※ 自動返信メールが届かない場合は、迷惑メールフォルダをご確認ください。');
+                    
+                    this.reset();
+                    
+                } catch (error) {
+                    console.error('送信エラー:', error);
+                    alert('送信中にエラーが発生しました。\nお手数ですが、もう一度お試しいただくか、\n直接メールにてお問い合わせください。');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.opacity = '1';
+                }
+            });
+        </script>
+    </Fragment>
+</BaseLayout>
+
+
