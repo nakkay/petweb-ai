@@ -84,12 +84,12 @@ nav {
 }
 
 .hero {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 12rem 4rem 8rem;
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 8rem;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 6rem;
     align-items: center;
 }
 

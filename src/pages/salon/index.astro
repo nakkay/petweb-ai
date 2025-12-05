@@ -7,6 +7,9 @@ import '../../styles/salon.css';
     title="わんわんサロン | ペットトリミング・グルーミング専門店"
     description="わんわんサロン - 大切なペットを美しく、健康に。トリミング、シャンプー、爪切りなど、プロのトリマーが丁寧に対応いたします。"
 >
+    <Fragment slot="head">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    </Fragment>
     <header>
         <nav>
             <div class="logo">
@@ -104,7 +107,7 @@ import '../../styles/salon.css';
             <div class="blog-grid">
                 <a href="#" class="blog-card">
                     <div class="blog-image">
-                        <img src="/salon/images/blog1.jpg" alt="冬の被毛ケア">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=375&fit=crop" alt="冬の被毛ケア">
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
@@ -117,7 +120,7 @@ import '../../styles/salon.css';
                 </a>
                 <a href="#" class="blog-card">
                     <div class="blog-image">
-                        <img src="/salon/images/blog2.jpg" alt="トリミングの頻度">
+                        <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=600&h=375&fit=crop" alt="トリミングの頻度">
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
@@ -130,7 +133,7 @@ import '../../styles/salon.css';
                 </a>
                 <a href="#" class="blog-card">
                     <div class="blog-image">
-                        <img src="/salon/images/blog3.jpg" alt="シャンプー選び">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&h=375&fit=crop" alt="シャンプー選び">
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
@@ -221,7 +224,7 @@ import '../../styles/salon.css';
                     </div>
                     <div class="ba-item">
                         <div class="ba-image">
-                            <img src="/salon/images/salon-ba4.jpg" alt="チワワのトリミング">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=500&h=500&fit=crop" alt="チワワのトリミング">
                         </div>
                         <div class="ba-info">
                             <h4>🐕 チワワ（4歳）</h4>
@@ -230,7 +233,7 @@ import '../../styles/salon.css';
                     </div>
                     <div class="ba-item">
                         <div class="ba-image">
-                            <img src="/salon/images/salon-ba5.jpg" alt="ポメラニアンのトリミング">
+                            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&h=500&fit=crop" alt="ポメラニアンのトリミング">
                         </div>
                         <div class="ba-info">
                             <h4>🦊 ポメラニアン（2歳）</h4>
@@ -253,26 +256,26 @@ import '../../styles/salon.css';
             
             <div class="gallery-container">
                 <div class="gallery-main" id="galleryMain">
-                    <img src="/salon/images/salon-exterior.jpg" alt="サロン外観">
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=900&h=600&fit=crop" alt="サロン外観">
                 </div>
                 <div class="gallery-thumbnails" id="galleryThumbs">
                     <div class="gallery-thumb active" data-index="0">
-                        <img src="/salon/images/salon-exterior.jpg" alt="サロン外観">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=300&h=300&fit=crop" alt="サロン外観">
                     </div>
                     <div class="gallery-thumb" data-index="1">
-                        <img src="/salon/images/salon-interior1.jpg" alt="店内の様子1">
+                        <img src="https://images.unsplash.com/photo-1629083834993-7a5e0d6d80db?w=300&h=300&fit=crop" alt="店内の様子1">
                     </div>
                     <div class="gallery-thumb" data-index="2">
-                        <img src="/salon/images/salon-interior2.jpg" alt="店内の様子2">
+                        <img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?w=300&h=300&fit=crop" alt="店内の様子2">
                     </div>
                     <div class="gallery-thumb" data-index="3">
-                        <img src="/salon/images/salon-equipment1.jpg" alt="トリミング設備">
+                        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=300&h=300&fit=crop" alt="トリミング設備">
                     </div>
                     <div class="gallery-thumb" data-index="4">
-                        <img src="/salon/images/salon-equipment2.jpg" alt="シャンプー設備">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=300&fit=crop" alt="シャンプー設備">
                     </div>
                     <div class="gallery-thumb" data-index="5">
-                        <img src="/salon/images/salon-waiting.jpg" alt="待合スペース">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=300&h=300&fit=crop" alt="待合スペース">
                     </div>
                 </div>
             </div>
@@ -502,12 +505,12 @@ import '../../styles/salon.css';
 
             // ギャラリー画像切り替え
             const galleryImages = [
-                '/salon/images/salon-exterior.jpg',
-                '/salon/images/salon-interior1.jpg',
-                '/salon/images/salon-interior2.jpg',
-                '/salon/images/salon-equipment1.jpg',
-                '/salon/images/salon-equipment2.jpg',
-                '/salon/images/salon-waiting.jpg'
+                'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=900&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1629083834993-7a5e0d6d80db?w=900&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1591946614720-90a587da4a36?w=900&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=900&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=900&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=900&h=600&fit=crop'
             ];
 
             const thumbs = document.querySelectorAll('.gallery-thumb');

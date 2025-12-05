@@ -196,7 +196,7 @@ nav {
 }
 
 .hero-slide.active {
-    opacity: 0.15;
+    opacity: 0.35;
 }
 
 .hero-slide img {
@@ -204,7 +204,7 @@ nav {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: grayscale(40%) contrast(1.1);
+    filter: grayscale(20%) contrast(1.05);
 }
 
 .hero > * {
