@@ -45,18 +45,7 @@ import '../../styles/hospital.css';
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-bg-slider">
-            <div class="hero-slide active">
-                <img src="/hospital/images/hospital-hero2.jpg" alt="医療設備">
-            </div>
-            <div class="hero-slide">
-                <img src="/hospital/images/hospital-hero2.jpg" alt="医療設備">
-            </div>
-            <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=1600&h=900&fit=crop" alt="院内環境">
-            </div>
-        </div>
+    <section class="hero" style="background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.6)), url('/hospital/images/hospital-hero2.jpg') center/cover no-repeat;">
         <p class="hero-tagline en">
             Evidence-Based Veterinary Medicine
         </p>
@@ -538,18 +527,6 @@ import '../../styles/hospital.css';
                     mobileMenu.classList.remove('active');
                 });
             });
-
-            // ヒーロー背景カルーセル
-            let heroSlideIndex = 0;
-            const heroSlides = document.querySelectorAll('.hero-slide');
-
-            function showHeroSlide() {
-                heroSlides.forEach(slide => slide.classList.remove('active'));
-                heroSlideIndex = (heroSlideIndex + 1) % heroSlides.length;
-                heroSlides[heroSlideIndex].classList.add('active');
-            }
-
-            setInterval(showHeroSlide, 5000);
 
             // スムーズスクロール
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
